@@ -1,0 +1,273 @@
+I210116 16:20:22.189128 1 util/log/sync_buffer.go:195 ⋮ [config] file created at: 2021/01/16 16:20:22
+I210116 16:20:22.189141 1 util/log/sync_buffer.go:195 ⋮ [config] running on machine: ‹Jillians-MacBook-Pro›
+I210116 16:20:22.189149 1 util/log/sync_buffer.go:195 ⋮ [config] binary: CockroachDB CCL v20.2.3 (x86_64-apple-darwin14, built 2020/12/14 18:37:58, go1.13.14)
+I210116 16:20:22.189154 1 util/log/sync_buffer.go:195 ⋮ [config] arguments: ‹[cockroach start --certs-dir=certs --store=node3 --listen-addr=localhost:26259 --http-addr=localhost:8082 --join=localhost:26257,localhost:26258,localhost:26259]›
+I210116 16:20:22.189168 1 util/log/sync_buffer.go:195 ⋮ [config] line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid file:line msg utf8=✓
+W210116 16:20:22.188830 1 cli/start.go:983 ⋮ ‹Using the default setting for --cache (128 MiB).›
+‹  A significantly larger value is usually needed for good performance.›
+‹  If you have a dedicated server a reasonable setting is --cache=.25 (2.0 GiB).›
+I210116 16:20:22.191045 1 cli/start.go:1164 ⋮ ‹CockroachDB CCL v20.2.3 (x86_64-apple-darwin14, built 2020/12/14 18:37:58, go1.13.14)›
+I210116 16:20:22.193783 1 server/config.go:434 ⋮ system total memory: ‹8.0 GiB›
+I210116 16:20:22.193901 1 server/config.go:436 ⋮ server configuration:
+‹max offset             500000000›
+‹cache size             128 MiB›
+‹SQL memory pool size   2.0 GiB›
+‹scan interval          10m0s›
+‹scan min idle time     10ms›
+‹scan max idle time     1s›
+‹event log enabled      true›
+I210116 16:20:22.193977 1 cli/start.go:961 ⋮ using local environment variables: ‹COCKROACH_BACKGROUND_RESTART=1›
+I210116 16:20:22.194050 1 cli/start.go:968 ⋮ process identity: ‹uid 501 euid 501 gid 20 egid 20›
+I210116 16:20:22.198361 1 cli/start.go:504 ⋮ GEOS loaded from directory ‹/usr/local/lib/cockroach›
+I210116 16:20:22.198415 1 cli/start.go:509 ⋮ starting cockroach node
+I210116 16:20:22.216226 71 rpc/tls.go:270 ⋮ [n?] server certificate addresses: ‹IP=; DNS=localhost,Jillians-MacBook-Pro.local; CN=node›
+I210116 16:20:22.216273 71 rpc/tls.go:319 ⋮ [n?] web UI certificate addresses: ‹IP=; DNS=localhost,Jillians-MacBook-Pro.local; CN=node›
+I210116 16:20:22.290059 71 server/server.go:782 ⋮ [n?] monitoring forward clock jumps based on server.clock.forward_jump_check_enabled
+W210116 16:20:22.291009 71 server/config_unix.go:112 ⋮ soft open file descriptor limit 10240 is under the recommended limit 15000; this may decrease performance
+‹please see https://www.cockroachlabs.com/docs/v20.2/recommended-production-settings.html for more details›
+I210116 16:20:22.331445 71 server/config.go:625 ⋮ [n?] 1 storage engine‹› initialized
+I210116 16:20:22.331499 71 server/config.go:628 ⋮ [n?] ‹Pebble cache size: 128 MiB›
+I210116 16:20:22.331511 71 server/config.go:628 ⋮ [n?] ‹store 0: RocksDB, max size 0 B, max open file limit 9984›
+I210116 16:20:22.347372 71 util/log/log.go:50 ⋮ initial startup completed
+Node will now attempt to join a running cluster, or wait for `cockroach init`.
+Client connections will be accepted after this completes successfully.
+Check the log file(s) for progress. 
+I210116 16:20:22.363398 71 server/init.go:208 ⋮ [n?] no stores bootstrapped
+I210116 16:20:22.363467 71 server/init.go:209 ⋮ [n?] awaiting `cockroach init` or join with an already initialized node
+W210116 16:20:22.373438 121 server/init.go:434 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:22.382127 121 server/init.go:434 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:23.397153 121 server/init.go:472 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:24.396261 121 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:25.396148 121 server/init.go:472 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:26.394172 121 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:27.396429 121 server/init.go:472 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:28.393124 121 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:29.410585 121 server/init.go:472 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:30.403881 121 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:31.396901 121 server/init.go:472 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:32.396705 121 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:33.400942 121 server/init.go:472 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:34.393402 121 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:35.395271 121 server/init.go:472 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:36.396598 121 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:37.397485 121 server/init.go:472 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:38.396560 121 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:39.397310 121 server/init.go:472 ⋮ [n?] ‹localhost:26257› is itself waiting for init, will retry
+W210116 16:20:40.395809 121 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+I210116 16:20:41.424503 71 server/init.go:311 ⋮ [n?] joined cluster ‹1eea99f3-f488-4602-b1df-dbb9d9b81c51› through join rpc
+I210116 16:20:41.424668 71 server/init.go:312 ⋮ [n?] received node ID 2
+W210116 16:20:41.424830 71 gossip/gossip.go:1494 ⋮ [n?] no incoming or outgoing connections
+I210116 16:20:41.424816 483 server/server.go:1416 ⋮ [n?] connecting to gossip network to verify cluster ID ‹"1eea99f3-f488-4602-b1df-dbb9d9b81c51"›
+I210116 16:20:41.424904 71 gossip/gossip.go:403 ⋮ [n2] NodeDescriptor set to ‹node_id:2 address:<network_field:"tcp" address_field:"localhost:26259" > attrs:<> locality:<> ServerVersion:<major_val:20 minor_val:2 patch:0 unstable:0 > build_tag:"v20.2.3" started_at:1610814041424889000 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26259" >›
+I210116 16:20:41.426019 71 kv/kvserver/stores.go:236 ⋮ [n2] read 0 node addresses from persistent storage
+I210116 16:20:41.435253 455 gossip/client.go:124 ⋮ [n2] started gossip client to ‹localhost:26257›
+I210116 16:20:41.446889 28 kv/kvserver/stores.go:255 ⋮ [n2] wrote 1 node addresses to persistent storage
+I210116 16:20:41.447054 483 server/server.go:1419 ⋮ [n2] node connected via gossip
+I210116 16:20:41.471383 28 kv/kvserver/stores.go:255 ⋮ [n2] wrote 2 node addresses to persistent storage
+I210116 16:20:41.587525 71 server/node.go:606 ⋮ [n2] bootstrapped store [n2,s2]
+I210116 16:20:41.588340 71 server/node.go:489 ⋮ [n2] started with engine type ‹2›
+I210116 16:20:41.588375 71 server/node.go:491 ⋮ [n2] started with attributes ‹[]›
+I210116 16:20:41.591141 71 server/goroutinedumper/goroutinedumper.go:120 ⋮ [n2] writing goroutine dumps to ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node3/logs/goroutine_dump›
+I210116 16:20:41.597002 71 server/heapprofiler/heapprofiler.go:49 ⋮ [n2] writing go heap profiles to ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node3/logs/heap_profiler› at least every 1h0m0s
+I210116 16:20:41.597068 71 server/heapprofiler/cgoprofiler.go:53 ⋮ [n2] to enable jmalloc profiling: "export MALLOC_CONF=prof:true" or "ln -s prof:true /etc/malloc.conf"
+I210116 16:20:41.597084 71 server/heapprofiler/statsprofiler.go:54 ⋮ [n2] writing memory stats to ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node3/logs/heap_profiler› at last every 1h0m0s
+I210116 16:20:41.597117 71 server/server.go:1536 ⋮ [n2] starting https server at ‹127.0.0.1:8082› (use: ‹localhost:8082›)
+I210116 16:20:41.597164 71 server/server.go:1543 ⋮ [n2] starting grpc/postgres server at ‹127.0.0.1:26259›
+I210116 16:20:41.597196 71 server/server.go:1544 ⋮ [n2] advertising CockroachDB node at ‹localhost:26259›
+I210116 16:20:41.602657 535 server/server.go:1110 ⋮ active cluster version is now 20.2 (up from 20.1)
+I210116 16:20:41.638207 71 sql/sqlliveness/slinstance/slinstance.go:252 ⋮ [n2] starting SQL liveness instance
+I210116 16:20:41.639373 595 sql/temporary_schema.go:490 ⋮ [n2] skipping temporary object cleanup run as it is not the leaseholder
+I210116 16:20:41.639437 595 sql/temporary_schema.go:491 ⋮ [n2] completed temporary object cleanup job
+I210116 16:20:41.639452 595 sql/temporary_schema.go:614 ⋮ [n2] temporary object cleaner next scheduled to run at 2021-01-16 16:50:41.639282 +0000 UTC
+I210116 16:20:41.642442 71 sqlmigrations/migrations.go:628 ⋮ [n2] failed attempt to acquire migration lease: ‹lease /System/"system-version/lease" is not available until at least 1610814101.000856000,1›
+I210116 16:20:41.697257 71 sqlmigrations/migrations.go:628 ⋮ [n2] failed attempt to acquire migration lease: ‹lease /System/"system-version/lease" is not available until at least 1610814101.000856000,1›
+I210116 16:20:41.702121 591 sql/event_log.go:162 ⋮ [n2] Event: ‹"node_join"›, target: 2, info: ‹{Descriptor:{NodeID:2 Address:localhost:26259 Attrs: Locality: ServerVersion:20.2 BuildTag:v20.2.3 StartedAt:1610814041424889000 LocalityAddress:[] ClusterName: SQLAddress:localhost:26259} ClusterID:1eea99f3-f488-4602-b1df-dbb9d9b81c51 StartedAt:1610814041424889000 LastUp:1610814041424889000}›
+I210116 16:20:41.702288 593 sql/sqlliveness/slstorage/slstorage.go:342 ⋮ [n2] inserted sqlliveness session ‹a869d76578f7442581f178a454fbb23f›
+I210116 16:20:41.702320 593 sql/sqlliveness/slinstance/slinstance.go:143 ⋮ [n2] created new SQL liveness session ‹a869d76578f7442581f178a454fbb23f›
+I210116 16:20:41.731461 455 gossip/client.go:129 ⋮ [n2] closing client to n1 (‹localhost:26257›): stopping outgoing client to n1 (‹localhost:26257›); already have incoming
+I210116 16:20:41.731616 486 gossip/gossip.go:1508 ⋮ [n2] node has connected to cluster via gossip
+I210116 16:20:41.744093 486 kv/kvserver/stores.go:255 ⋮ [n2] wrote 2 node addresses to persistent storage
+I210116 16:20:41.793183 71 sqlmigrations/migrations.go:628 ⋮ [n2] failed attempt to acquire migration lease: ‹lease /System/"system-version/lease" is not available until at least 1610814101.000856000,1›
+I210116 16:20:41.822016 640 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r11/2:{-}] applying LEARNER snapshot [id=‹6846b2ff› index=16]
+I210116 16:20:42.021324 640 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r11/2:‹/Table/1{5-6}›] applied LEARNER snapshot [‹total=198ms›‹›‹ingestion=4@181ms›id=‹6846b2ff› index=16]
+I210116 16:20:42.021917 71 server/server_sql.go:753 ⋮ [n2] done ensuring all necessary migrations have run
+I210116 16:20:42.021967 71 server/server.go:1876 ⋮ [n2] serving sql connections
+I210116 16:20:42.025100 71 cli/start.go:670 ⋮ [config] clusterID: ‹1eea99f3-f488-4602-b1df-dbb9d9b81c51›
+I210116 16:20:42.025150 71 cli/start.go:680 ⋮ node startup completed:
+CockroachDB node starting at 2021-01-16 16:20:42.02358 +0000 UTC (took 19.8s)
+build:               CCL v20.2.3 @ 2020/12/14 18:37:58 (go1.13.14)
+webui:               ‹https://localhost:8082›
+sql:                 ‹postgresql://root@localhost:26259?sslcert=certs%2Fclient.root.crt&sslkey=certs%2Fclient.root.key&sslmode=verify-full&sslrootcert=certs%2Fca.crt›
+RPC client flags:    ‹cockroach <client cmd> --host=localhost:26259 --certs-dir=certs›
+logs:                ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node3/logs›
+temp dir:            ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node3/cockroach-temp032186751›
+external I/O path:   ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node3/extern›
+store[0]:            ‹path=/Users/jillianexconde/Tack/Hack-the-North-Tack/node3›
+storage engine:      pebble
+status:              initialized new node, joined pre-existing cluster
+clusterID:           ‹1eea99f3-f488-4602-b1df-dbb9d9b81c51›
+nodeID:              2
+I210116 16:20:42.028881 681 jobs/job_scheduler.go:346 ⋮ [n2] waiting 2m0s before scheduled jobs daemon start
+I210116 16:20:42.105640 682 server/server_update.go:55 ⋮ [n2] no need to upgrade, cluster already at the newest version
+I210116 16:20:42.518797 688 gossip/client.go:124 ⋮ [n2] started gossip client to ‹localhost:26258›
+I210116 16:20:44.042002 784 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r7/3:{-}] applying LEARNER snapshot [id=‹7c826d21› index=24]
+I210116 16:20:44.192634 784 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r7/3:‹/Table/1{1-2}›] applied LEARNER snapshot [‹total=151ms›‹›‹ingestion=4@68ms›id=‹7c826d21› index=24]
+I210116 16:20:44.943572 846 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r19/3:{-}] applying LEARNER snapshot [id=‹1a4423b6› index=23]
+I210116 16:20:44.995847 846 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r19/3:‹/Table/2{3-4}›] applied LEARNER snapshot [‹total=52ms›‹›‹ingestion=4@37ms›id=‹1a4423b6› index=23]
+I210116 16:20:45.436731 871 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r26/3:{-}] applying LEARNER snapshot [id=‹8ce2678d› index=28]
+I210116 16:20:45.510516 871 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r26/3:‹/NamespaceTable/{30-Max}›] applied LEARNER snapshot [‹total=74ms›‹›‹ingestion=4@63ms›id=‹8ce2678d› index=28]
+I210116 16:20:46.025809 947 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r35/3:{-}] applying LEARNER snapshot [id=‹45c51502› index=32]
+I210116 16:20:46.092510 947 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r35/3:‹/{Table/39-Max}›] applied LEARNER snapshot [‹total=67ms›‹›‹ingestion=4@54ms›id=‹45c51502› index=32]
+I210116 16:20:46.600557 958 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r8/3:{-}] applying LEARNER snapshot [id=‹f0e3aaad› index=41]
+I210116 16:20:46.663432 958 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r8/3:‹/Table/1{2-3}›] applied LEARNER snapshot [‹total=63ms›‹›‹ingestion=4@54ms›id=‹f0e3aaad› index=41]
+I210116 16:20:47.193353 1050 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r27/3:{-}] applying LEARNER snapshot [id=‹c2d2a7df› index=20]
+I210116 16:20:47.251112 1050 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r27/3:‹/{NamespaceTab…-Table/32}›] applied LEARNER snapshot [‹total=58ms›‹›‹ingestion=4@47ms›id=‹c2d2a7df› index=20]
+I210116 16:20:47.623883 1063 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r31/3:{-}] applying LEARNER snapshot [id=‹7403842a› index=20]
+I210116 16:20:47.683487 1063 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r31/3:‹/Table/3{5-6}›] applied LEARNER snapshot [‹total=60ms›‹›‹ingestion=4@48ms›id=‹7403842a› index=20]
+I210116 16:20:48.067539 1114 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r9/3:{-}] applying LEARNER snapshot [id=‹dca78194› index=110]
+I210116 16:20:48.130990 1114 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r9/3:‹/Table/1{3-4}›] applied LEARNER snapshot [‹total=63ms›‹›‹ingestion=4@53ms›id=‹dca78194› index=110]
+I210116 16:20:48.718668 1218 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r17/3:{-}] applying LEARNER snapshot [id=‹b5366b02› index=26]
+I210116 16:20:48.778086 1218 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r17/3:‹/Table/2{1-2}›] applied LEARNER snapshot [‹total=59ms›‹›‹ingestion=4@49ms›id=‹b5366b02› index=26]
+I210116 16:20:49.258554 1228 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r16/3:{-}] applying LEARNER snapshot [id=‹d74376c5› index=22]
+I210116 16:20:49.305354 1228 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r16/3:‹/Table/2{0-1}›] applied LEARNER snapshot [‹total=47ms›‹›‹ingestion=4@37ms›id=‹d74376c5› index=22]
+I210116 16:20:49.543339 1298 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r29/2:{-}] applying LEARNER snapshot [id=‹f632fd64› index=16]
+I210116 16:20:49.601438 1298 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r29/2:‹/Table/3{3-4}›] applied LEARNER snapshot [‹total=58ms›‹›‹ingestion=4@47ms›id=‹f632fd64› index=16]
+I210116 16:20:50.358803 1325 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r5/3:{-}] applying LEARNER snapshot [id=‹b03d38b2› index=23]
+I210116 16:20:50.420525 1325 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r5/3:‹/{Systemtse-Table/System…}›] applied LEARNER snapshot [‹total=62ms›‹›‹ingestion=4@51ms›id=‹b03d38b2› index=23]
+I210116 16:20:50.989448 1411 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r32/3:{-}] applying LEARNER snapshot [id=‹44692dfa› index=23]
+I210116 16:20:51.075294 1411 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r32/3:‹/Table/3{6-7}›] applied LEARNER snapshot [‹total=86ms›‹›‹ingestion=4@59ms›id=‹44692dfa› index=23]
+I210116 16:20:51.302434 1450 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r10/2:{-}] applying LEARNER snapshot [id=‹afc5b527› index=18]
+I210116 16:20:51.378325 1450 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r10/2:‹/Table/1{4-5}›] applied LEARNER snapshot [‹total=76ms›‹›‹ingestion=4@65ms›id=‹afc5b527› index=18]
+W210116 16:20:51.597898 536 server/status/runtime.go:449 ⋮ [n2] unable to get file descriptor usage (will not try again): ‹not implemented on darwin›
+I210116 16:20:51.603358 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 90 MiB RSS, 262 goroutines, 29 MiB/27 MiB/44 MiB GO alloc/idle/total, 8.1 MiB/12 MiB CGO alloc/total, 0.0 CGO/sec, 0.0/0.0 %(u/s)time, 0.0 %gc (10x), 1.8 MiB/5.0 MiB (r/w)net
+I210116 16:20:52.003632 1541 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r1/2:{-}] applying LEARNER snapshot [id=‹fccc462a› index=185]
+I210116 16:20:52.058316 1541 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r1/2:‹/{Min-System/NodeL…}›] applied LEARNER snapshot [‹total=55ms›‹›‹ingestion=4@44ms›id=‹fccc462a› index=185]
+I210116 16:20:52.873435 1593 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r25/3:{-}] applying LEARNER snapshot [id=‹f98be2d3› index=22]
+I210116 16:20:52.949118 1593 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r25/3:‹/{Table/29-NamespaceTab…}›] applied LEARNER snapshot [‹total=76ms›‹›‹ingestion=4@66ms›id=‹f98be2d3› index=22]
+I210116 16:20:53.468465 1666 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r14/3:{-}] applying LEARNER snapshot [id=‹4872ef59› index=22]
+I210116 16:20:53.554495 1666 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r14/3:‹/Table/1{8-9}›] applied LEARNER snapshot [‹total=86ms›‹›‹ingestion=4@76ms›id=‹4872ef59› index=22]
+I210116 16:20:53.756488 1680 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r30/2:{-}] applying LEARNER snapshot [id=‹c29deadb› index=18]
+I210116 16:20:53.807368 1680 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r30/2:‹/Table/3{4-5}›] applied LEARNER snapshot [‹total=51ms›‹›‹ingestion=4@41ms›id=‹c29deadb› index=18]
+I210116 16:20:54.367439 1723 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r6/2:{-}] applying LEARNER snapshot [id=‹969c1bf5› index=37]
+I210116 16:20:54.438670 1723 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r6/2:‹/Table/{SystemCon…-11}›] applied LEARNER snapshot [‹total=71ms›‹›‹ingestion=4@56ms›id=‹969c1bf5› index=37]
+I210116 16:20:55.284394 1761 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r22/3:{-}] applying LEARNER snapshot [id=‹070a7251› index=22]
+I210116 16:20:55.382754 1761 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r22/3:‹/Table/2{6-7}›] applied LEARNER snapshot [‹total=98ms›‹›‹ingestion=4@82ms›id=‹070a7251› index=22]
+I210116 16:20:55.941391 1837 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r3/3:{-}] applying LEARNER snapshot [id=‹26502e90› index=71]
+I210116 16:20:56.062838 1837 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r3/3:‹/System/{NodeLive…-tsd}›] applied LEARNER snapshot [‹total=121ms›‹›‹ingestion=4@80ms›id=‹26502e90› index=71]
+I210116 16:20:57.458498 1886 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r4/3:{-}] applying LEARNER snapshot [id=‹644d8c77› index=41]
+I210116 16:20:57.534788 1886 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r4/3:‹/System{/tsd-tse}›] applied LEARNER snapshot [‹total=76ms›‹›‹ingestion=4@66ms›id=‹644d8c77› index=41]
+I210116 16:20:58.419182 1978 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r20/3:{-}] applying LEARNER snapshot [id=‹c9b26fbf› index=23]
+I210116 16:20:58.478467 1978 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r20/3:‹/Table/2{4-5}›] applied LEARNER snapshot [‹total=59ms›‹›‹ingestion=4@40ms›id=‹c9b26fbf› index=23]
+I210116 16:20:59.408812 2050 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r2/3:{-}] applying LEARNER snapshot [id=‹d0aebb2a› index=48]
+I210116 16:20:59.467967 2050 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r2/3:‹/System/NodeLiveness{-Max}›] applied LEARNER snapshot [‹total=59ms›‹›‹ingestion=4@50ms›id=‹d0aebb2a› index=48]
+I210116 16:21:00.339894 2107 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r12/3:{-}] applying LEARNER snapshot [id=‹eb8e558c› index=21]
+I210116 16:21:00.389961 2107 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r12/3:‹/Table/1{6-7}›] applied LEARNER snapshot [‹total=50ms›‹›‹ingestion=4@39ms›id=‹eb8e558c› index=21]
+I210116 16:21:01.592782 531 kv/kvserver/store.go:2638 ⋮ [n2,s2] sstables (read amplification = 1):
+‹6 [ 122K 1 ]: 122K›
+I210116 16:21:01.592947 531 kv/kvserver/store.go:2639 ⋮ [n2,s2] ‹›
+‹__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp›
+‹    WAL         2   260 K       -   662 K       -       -       -       -   677 K       -       -       -     1.0›
+‹      0         0     0 B    0.00   417 K   197 K      95     0 B       0   119 K      26     0 B       0     0.3›
+‹      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      6         1   122 K       -   327 K    12 K       9   1.2 K       1   2.0 M      59   2.2 M       1     6.2›
+‹  total         1   122 K       -   886 K   209 K     104   1.2 K       1   3.0 M      85   2.2 M       1     3.4›
+‹  flush        26›
+‹compact        61     0 B          (size == estimated-debt)›
+‹ memtbl         2   768 K›
+‹zmemtbl         0     0 B›
+‹   ztbl         0     0 B›
+‹ bcache         8   166 K   88.1%  (score == hit-rate)›
+‹ tcache         1   616 B   94.1%  (score == hit-rate)›
+‹ titers         0›
+‹ filter         -       -   69.8%  (score == utility)›
+I210116 16:21:01.612313 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 101 MiB RSS, 262 goroutines, 30 MiB/24 MiB/50 MiB GO alloc/idle/total, 13 MiB/19 MiB CGO alloc/total, 178.3 CGO/sec, 5.9/4.7 %(u/s)time, 0.0 %gc (2x), 1.5 MiB/2.9 MiB (r/w)net
+I210116 16:21:02.272211 2128 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r23/2:{-}] applying LEARNER snapshot [id=‹11dd23af› index=18]
+I210116 16:21:02.330738 2128 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r23/2:‹/Table/2{7-8}›] applied LEARNER snapshot [‹total=58ms›‹›‹ingestion=4@49ms›id=‹11dd23af› index=18]
+I210116 16:21:04.421469 2254 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r21/3:{-}] applying LEARNER snapshot [id=‹599002ed› index=21]
+I210116 16:21:04.471061 2254 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r21/3:‹/Table/2{5-6}›] applied LEARNER snapshot [‹total=50ms›‹›‹ingestion=4@38ms›id=‹599002ed› index=21]
+I210116 16:21:05.124803 2310 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r33/2:{-}] applying LEARNER snapshot [id=‹d79ad7ee› index=18]
+I210116 16:21:05.166319 2310 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r33/2:‹/Table/3{7-8}›] applied LEARNER snapshot [‹total=41ms›‹›‹ingestion=4@32ms›id=‹d79ad7ee› index=18]
+I210116 16:21:08.104373 2450 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r15/2:{-}] applying LEARNER snapshot [id=‹ce42637c› index=18]
+I210116 16:21:08.152515 2450 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r15/2:‹/Table/{19-20}›] applied LEARNER snapshot [‹total=48ms›‹›‹ingestion=4@37ms›id=‹ce42637c› index=18]
+I210116 16:21:09.468462 2497 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r18/3:{-}] applying LEARNER snapshot [id=‹ca721e0f› index=22]
+I210116 16:21:09.516148 2497 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r18/3:‹/Table/2{2-3}›] applied LEARNER snapshot [‹total=48ms›‹›‹ingestion=4@32ms›id=‹ca721e0f› index=22]
+I210116 16:21:11.613322 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 108 MiB RSS, 262 goroutines, 29 MiB/26 MiB/53 MiB GO alloc/idle/total, 14 MiB/26 MiB CGO alloc/total, 142.4 CGO/sec, 4.3/3.0 %(u/s)time, 0.0 %gc (2x), 1020 KiB/1.9 MiB (r/w)net
+I210116 16:21:12.140129 2643 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r13/2:{-}] applying LEARNER snapshot [id=‹447e7607› index=18]
+I210116 16:21:12.244310 2643 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r13/2:‹/Table/1{7-8}›] applied LEARNER snapshot [‹total=104ms›‹›‹ingestion=4@84ms›id=‹447e7607› index=18]
+I210116 16:21:13.146402 2699 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r34/2:{-}] applying LEARNER snapshot [id=‹f0460160› index=18]
+I210116 16:21:13.244361 2699 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r34/2:‹/Table/3{8-9}›] applied LEARNER snapshot [‹total=98ms›‹›‹ingestion=4@63ms›id=‹f0460160› index=18]
+I210116 16:21:14.166315 2745 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r24/2:{-}] applying LEARNER snapshot [id=‹fec0042c› index=18]
+I210116 16:21:14.236255 2745 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r24/2:‹/Table/2{8-9}›] applied LEARNER snapshot [‹total=70ms›‹›‹ingestion=4@58ms›id=‹fec0042c› index=18]
+I210116 16:21:15.433423 2837 kv/kvserver/replica_raftstorage.go:798 ⋮ [n2,s2,r28/3:{-}] applying LEARNER snapshot [id=‹71695448› index=21]
+I210116 16:21:15.479785 2837 kv/kvserver/replica_raftstorage.go:819 ⋮ [n2,s2,r28/3:‹/Table/3{2-3}›] applied LEARNER snapshot [‹total=46ms›‹›‹ingestion=4@36ms›id=‹71695448› index=21]
+I210116 16:21:21.619363 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 112 MiB RSS, 263 goroutines, 23 MiB/29 MiB/53 MiB GO alloc/idle/total, 17 MiB/29 MiB CGO alloc/total, 109.7 CGO/sec, 3.8/2.5 %(u/s)time, 0.0 %gc (2x), 1.3 MiB/2.6 MiB (r/w)net
+I210116 16:21:31.625190 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 113 MiB RSS, 263 goroutines, 33 MiB/22 MiB/53 MiB GO alloc/idle/total, 17 MiB/29 MiB CGO alloc/total, 0.6 CGO/sec, 1.3/1.0 %(u/s)time, 0.0 %gc (0x), 575 KiB/1.3 MiB (r/w)net
+I210116 16:21:41.591219 532 gossip/gossip.go:568 ⋮ [n2] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  3: ‹localhost:26258› (59s: infos 293/285 sent/received, bytes 62721B/63823B sent/received)
+gossip server (1/3 cur/max conns, infos 496/604 sent/received, bytes 119748B/199686B sent/received)
+  1: ‹localhost:26257› (1m0s)
+gossip connectivity
+  n1 [sentinel];
+  n1 -> n2; n2 -> n3; n3 -> n1;
+I210116 16:21:41.627830 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 110 MiB RSS, 263 goroutines, 30 MiB/24 MiB/55 MiB GO alloc/idle/total, 21 MiB/33 MiB CGO alloc/total, 11.7 CGO/sec, 1.6/1.1 %(u/s)time, 0.0 %gc (1x), 630 KiB/1.3 MiB (r/w)net
+I210116 16:21:51.626280 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 111 MiB RSS, 262 goroutines, 41 MiB/15 MiB/55 MiB GO alloc/idle/total, 21 MiB/33 MiB CGO alloc/total, 0.9 CGO/sec, 1.5/1.1 %(u/s)time, 0.0 %gc (0x), 609 KiB/1.3 MiB (r/w)net
+I210116 16:22:01.631825 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 116 MiB RSS, 262 goroutines, 29 MiB/24 MiB/61 MiB GO alloc/idle/total, 21 MiB/33 MiB CGO alloc/total, 13.2 CGO/sec, 1.7/1.1 %(u/s)time, 0.0 %gc (1x), 550 KiB/1.2 MiB (r/w)net
+I210116 16:22:11.632077 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 117 MiB RSS, 262 goroutines, 39 MiB/17 MiB/61 MiB GO alloc/idle/total, 21 MiB/33 MiB CGO alloc/total, 0.6 CGO/sec, 1.4/1.1 %(u/s)time, 0.0 %gc (0x), 560 KiB/1.2 MiB (r/w)net
+I210116 16:22:21.626155 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 119 MiB RSS, 263 goroutines, 27 MiB/27 MiB/59 MiB GO alloc/idle/total, 21 MiB/33 MiB CGO alloc/total, 1.3 CGO/sec, 1.8/1.3 %(u/s)time, 0.0 %gc (1x), 638 KiB/1.3 MiB (r/w)net
+I210116 16:22:31.622945 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 120 MiB RSS, 263 goroutines, 36 MiB/20 MiB/59 MiB GO alloc/idle/total, 29 MiB/41 MiB CGO alloc/total, 0.7 CGO/sec, 1.3/1.1 %(u/s)time, 0.0 %gc (0x), 570 KiB/1.4 MiB (r/w)net
+I210116 16:22:41.572084 532 gossip/gossip.go:568 ⋮ [n2] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  3: ‹localhost:26258› (1m59s: infos 498/486 sent/received, bytes 92677B/95480B sent/received)
+gossip server (1/3 cur/max conns, infos 814/1009 sent/received, bytes 171814B/261030B sent/received)
+  1: ‹localhost:26257› (2m0s)
+I210116 16:22:41.622252 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 121 MiB RSS, 263 goroutines, 25 MiB/28 MiB/56 MiB GO alloc/idle/total, 29 MiB/41 MiB CGO alloc/total, 0.6 CGO/sec, 1.8/1.4 %(u/s)time, 0.0 %gc (1x), 617 KiB/1.4 MiB (r/w)net
+I210116 16:22:51.628362 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 118 MiB RSS, 262 goroutines, 37 MiB/19 MiB/56 MiB GO alloc/idle/total, 29 MiB/41 MiB CGO alloc/total, 0.6 CGO/sec, 1.7/1.3 %(u/s)time, 0.0 %gc (0x), 672 KiB/1.4 MiB (r/w)net
+I210116 16:23:01.643283 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 119 MiB RSS, 262 goroutines, 28 MiB/25 MiB/56 MiB GO alloc/idle/total, 29 MiB/41 MiB CGO alloc/total, 0.8 CGO/sec, 1.6/1.1 %(u/s)time, 0.0 %gc (1x), 557 KiB/1.2 MiB (r/w)net
+I210116 16:23:11.644819 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 120 MiB RSS, 262 goroutines, 40 MiB/16 MiB/56 MiB GO alloc/idle/total, 29 MiB/41 MiB CGO alloc/total, 0.6 CGO/sec, 1.5/1.1 %(u/s)time, 0.0 %gc (0x), 596 KiB/1.5 MiB (r/w)net
+I210116 16:23:21.635868 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 122 MiB RSS, 263 goroutines, 29 MiB/25 MiB/56 MiB GO alloc/idle/total, 29 MiB/41 MiB CGO alloc/total, 0.6 CGO/sec, 1.7/1.1 %(u/s)time, 0.0 %gc (1x), 520 KiB/1.4 MiB (r/w)net
+I210116 16:23:31.658683 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 122 MiB RSS, 263 goroutines, 39 MiB/18 MiB/56 MiB GO alloc/idle/total, 29 MiB/41 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.9 %(u/s)time, 0.0 %gc (0x), 534 KiB/1.2 MiB (r/w)net
+I210116 16:23:41.568229 532 gossip/gossip.go:568 ⋮ [n2] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  3: ‹localhost:26258› (2m59s: infos 711/696 sent/received, bytes 141438B/128447B sent/received)
+gossip server (1/3 cur/max conns, infos 1136/1430 sent/received, bytes 242423B/342329B sent/received)
+  1: ‹localhost:26257› (3m0s)
+I210116 16:23:41.646982 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 124 MiB RSS, 262 goroutines, 30 MiB/24 MiB/56 MiB GO alloc/idle/total, 29 MiB/41 MiB CGO alloc/total, 0.6 CGO/sec, 1.8/1.3 %(u/s)time, 0.0 %gc (1x), 627 KiB/1.4 MiB (r/w)net
+I210116 16:23:51.650559 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 124 MiB RSS, 262 goroutines, 41 MiB/16 MiB/56 MiB GO alloc/idle/total, 29 MiB/41 MiB CGO alloc/total, 0.6 CGO/sec, 1.5/1.1 %(u/s)time, 0.0 %gc (0x), 632 KiB/1.3 MiB (r/w)net
+I210116 16:24:01.660137 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 125 MiB RSS, 262 goroutines, 30 MiB/23 MiB/56 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.7 CGO/sec, 1.5/1.1 %(u/s)time, 0.0 %gc (1x), 552 KiB/1.3 MiB (r/w)net
+I210116 16:24:11.678138 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 126 MiB RSS, 260 goroutines, 40 MiB/16 MiB/56 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.3/1.1 %(u/s)time, 0.0 %gc (0x), 504 KiB/1.1 MiB (r/w)net
+I210116 16:24:21.662828 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 126 MiB RSS, 260 goroutines, 32 MiB/23 MiB/57 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.7/1.1 %(u/s)time, 0.0 %gc (1x), 616 KiB/1.2 MiB (r/w)net
+I210116 16:24:31.701632 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 127 MiB RSS, 261 goroutines, 39 MiB/18 MiB/57 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.3/1.1 %(u/s)time, 0.0 %gc (0x), 520 KiB/1.1 MiB (r/w)net
+I210116 16:24:41.568833 532 gossip/gossip.go:568 ⋮ [n2] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  3: ‹localhost:26258› (3m59s: infos 919/904 sent/received, bytes 171751B/160930B sent/received)
+gossip server (1/3 cur/max conns, infos 1457/1848 sent/received, bytes 294928B/405150B sent/received)
+  1: ‹localhost:26257› (4m0s)
+I210116 16:24:41.676519 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 128 MiB RSS, 259 goroutines, 31 MiB/23 MiB/57 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.7/1.2 %(u/s)time, 0.0 %gc (1x), 581 KiB/1.2 MiB (r/w)net
+I210116 16:24:51.687795 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 128 MiB RSS, 259 goroutines, 23 MiB/28 MiB/57 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.8/1.1 %(u/s)time, 0.0 %gc (1x), 616 KiB/1.3 MiB (r/w)net
+I210116 16:25:01.683040 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 126 MiB RSS, 259 goroutines, 33 MiB/20 MiB/57 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.3/1.0 %(u/s)time, 0.0 %gc (0x), 927 KiB/1.2 MiB (r/w)net
+I210116 16:25:11.685435 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 127 MiB RSS, 260 goroutines, 43 MiB/14 MiB/57 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.3/1.1 %(u/s)time, 0.0 %gc (0x), 557 KiB/1.3 MiB (r/w)net
+I210116 16:25:21.688232 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 129 MiB RSS, 260 goroutines, 34 MiB/21 MiB/58 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.7/1.1 %(u/s)time, 0.0 %gc (1x), 506 KiB/1.2 MiB (r/w)net
+I210116 16:25:31.693059 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 130 MiB RSS, 260 goroutines, 44 MiB/12 MiB/58 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.4/1.1 %(u/s)time, 0.0 %gc (0x), 547 KiB/1.2 MiB (r/w)net
+I210116 16:25:41.569474 532 gossip/gossip.go:568 ⋮ [n2] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  3: ‹localhost:26258› (4m59s: infos 1125/1107 sent/received, bytes 201680B/192680B sent/received)
+gossip server (1/3 cur/max conns, infos 1774/2257 sent/received, bytes 346805B/466910B sent/received)
+  1: ‹localhost:26257› (5m0s)
+I210116 16:25:41.698195 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 131 MiB RSS, 262 goroutines, 35 MiB/20 MiB/59 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 2.0/1.4 %(u/s)time, 0.0 %gc (1x), 590 KiB/1.3 MiB (r/w)net
+I210116 16:25:51.704395 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 132 MiB RSS, 262 goroutines, 23 MiB/28 MiB/59 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.9/1.2 %(u/s)time, 0.0 %gc (1x), 617 KiB/1.2 MiB (r/w)net
+I210116 16:26:01.703242 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 133 MiB RSS, 262 goroutines, 33 MiB/21 MiB/59 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.4/1.0 %(u/s)time, 0.0 %gc (0x), 523 KiB/1.2 MiB (r/w)net
+I210116 16:26:11.706426 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 134 MiB RSS, 263 goroutines, 23 MiB/29 MiB/59 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.6/1.1 %(u/s)time, 0.0 %gc (1x), 558 KiB/1.2 MiB (r/w)net
+I210116 16:26:21.707545 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 135 MiB RSS, 263 goroutines, 33 MiB/21 MiB/59 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.6/1.1 %(u/s)time, 0.0 %gc (0x), 565 KiB/1.3 MiB (r/w)net
+I210116 16:26:31.721914 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 136 MiB RSS, 263 goroutines, 41 MiB/16 MiB/59 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.4/1.0 %(u/s)time, 0.0 %gc (1x), 518 KiB/1.4 MiB (r/w)net
+I210116 16:26:41.570653 532 gossip/gossip.go:568 ⋮ [n2] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  3: ‹localhost:26258› (5m59s: infos 1336/1307 sent/received, bytes 232712B/224404B sent/received)
+gossip server (1/3 cur/max conns, infos 2099/2667 sent/received, bytes 399967B/529060B sent/received)
+  1: ‹localhost:26257› (6m0s)
+I210116 16:26:41.719838 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 130 MiB RSS, 257 goroutines, 33 MiB/22 MiB/59 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.4/1.1 %(u/s)time, 0.0 %gc (0x), 640 KiB/1.6 MiB (r/w)net
+I210116 16:26:51.716907 536 server/status/runtime.go:522 ⋮ [n2] runtime stats: 130 MiB RSS, 259 goroutines, 24 MiB/28 MiB/59 MiB GO alloc/idle/total, 45 MiB/57 MiB CGO alloc/total, 0.6 CGO/sec, 1.7/1.0 %(u/s)time, 0.0 %gc (1x), 572 KiB/1.5 MiB (r/w)net

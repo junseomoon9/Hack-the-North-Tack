@@ -1,0 +1,712 @@
+I210116 16:19:24.512860 1 util/log/sync_buffer.go:195 ⋮ [config] file created at: 2021/01/16 16:19:24
+I210116 16:19:24.512959 1 util/log/sync_buffer.go:195 ⋮ [config] running on machine: ‹Jillians-MacBook-Pro›
+I210116 16:19:24.512989 1 util/log/sync_buffer.go:195 ⋮ [config] binary: CockroachDB CCL v20.2.3 (x86_64-apple-darwin14, built 2020/12/14 18:37:58, go1.13.14)
+I210116 16:19:24.513035 1 util/log/sync_buffer.go:195 ⋮ [config] arguments: ‹[cockroach start --certs-dir=certs --store=node1 --listen-addr=localhost:26257 --http-addr=localhost:8080 --join=localhost:26257,localhost:26258,localhost:26259]›
+I210116 16:19:24.513085 1 util/log/sync_buffer.go:195 ⋮ [config] line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid file:line msg utf8=✓
+W210116 16:19:24.480461 1 cli/start.go:983 ⋮ ‹Using the default setting for --cache (128 MiB).›
+‹  A significantly larger value is usually needed for good performance.›
+‹  If you have a dedicated server a reasonable setting is --cache=.25 (2.0 GiB).›
+I210116 16:19:24.515083 1 cli/start.go:1164 ⋮ ‹CockroachDB CCL v20.2.3 (x86_64-apple-darwin14, built 2020/12/14 18:37:58, go1.13.14)›
+I210116 16:19:24.540630 1 server/config.go:434 ⋮ system total memory: ‹8.0 GiB›
+I210116 16:19:24.541092 1 server/config.go:436 ⋮ server configuration:
+‹max offset             500000000›
+‹cache size             128 MiB›
+‹SQL memory pool size   2.0 GiB›
+‹scan interval          10m0s›
+‹scan min idle time     10ms›
+‹scan max idle time     1s›
+‹event log enabled      true›
+I210116 16:19:24.541846 1 cli/start.go:961 ⋮ using local environment variables: ‹COCKROACH_BACKGROUND_RESTART=1›
+I210116 16:19:24.542178 1 cli/start.go:968 ⋮ process identity: ‹uid 501 euid 501 gid 20 egid 20›
+I210116 16:19:24.879265 1 cli/start.go:504 ⋮ GEOS loaded from directory ‹/usr/local/lib/cockroach›
+I210116 16:19:24.879375 1 cli/start.go:509 ⋮ starting cockroach node
+I210116 16:19:24.952117 23 rpc/tls.go:270 ⋮ [n?] server certificate addresses: ‹IP=; DNS=localhost,Jillians-MacBook-Pro.local; CN=node›
+I210116 16:19:24.958403 23 rpc/tls.go:319 ⋮ [n?] web UI certificate addresses: ‹IP=; DNS=localhost,Jillians-MacBook-Pro.local; CN=node›
+I210116 16:19:25.270916 23 server/server.go:782 ⋮ [n?] monitoring forward clock jumps based on server.clock.forward_jump_check_enabled
+W210116 16:19:25.273224 23 server/config_unix.go:112 ⋮ soft open file descriptor limit 10240 is under the recommended limit 15000; this may decrease performance
+‹please see https://www.cockroachlabs.com/docs/v20.2/recommended-production-settings.html for more details›
+I210116 16:19:25.316675 23 server/config.go:625 ⋮ [n?] 1 storage engine‹› initialized
+I210116 16:19:25.317092 23 server/config.go:628 ⋮ [n?] ‹Pebble cache size: 128 MiB›
+I210116 16:19:25.317101 23 server/config.go:628 ⋮ [n?] ‹store 0: RocksDB, max size 0 B, max open file limit 9984›
+I210116 16:19:25.365904 23 util/log/log.go:50 ⋮ initial startup completed
+Node will now attempt to join a running cluster, or wait for `cockroach init`.
+Client connections will be accepted after this completes successfully.
+Check the log file(s) for progress. 
+I210116 16:19:25.381146 23 server/init.go:208 ⋮ [n?] no stores bootstrapped
+I210116 16:19:25.381247 23 server/init.go:209 ⋮ [n?] awaiting `cockroach init` or join with an already initialized node
+W210116 16:19:25.385042 59 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused". Reconnecting...›
+W210116 16:19:25.386148 57 server/init.go:436 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:25.387768 133 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26259  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused". Reconnecting...›
+W210116 16:19:25.387847 57 server/init.go:436 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:26.394007 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:27.391756 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:28.393514 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:29.391337 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:30.391900 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:31.390379 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:32.392567 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:33.411796 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:34.393166 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:35.393714 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:36.392999 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:37.395158 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:38.393500 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:39.390626 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:40.411076 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:41.404961 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:42.393900 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:43.392483 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:44.394479 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:45.393217 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:46.394061 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:47.391342 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:48.393127 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:49.393742 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:50.393718 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:51.392923 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:52.393076 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:53.393022 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:54.392303 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:55.369006 364 cli/start.go:494 ⋮ The server appears to be unable to contact the other nodes in the cluster. Please try:
+
+- starting the other nodes, if you haven't already;
+- double-checking that the '--join' and '--listen'/'--advertise' flags are set up correctly;
+- running the 'cockroach init' command if you are trying to initialize a new cluster.
+
+If problems persist, please see ‹https://www.cockroachlabs.com/docs/v20.2/cluster-setup-troubleshooting.html›.
+W210116 16:19:55.390217 377 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26259  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused". Reconnecting...›
+W210116 16:19:55.390309 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:56.393673 335 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused". Reconnecting...›
+W210116 16:19:56.393773 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:57.394347 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:19:58.391133 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:19:59.393025 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:00.393787 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:20:01.393422 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:02.390889 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:20:03.392854 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:04.393660 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:20:05.395412 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:06.399401 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210116 16:20:07.391272 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:08.407406 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:09.403171 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:10.766388 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:11.393051 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:12.401056 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:13.391717 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:14.398941 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:15.392157 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:16.397366 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:17.441527 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:18.401223 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:19.391879 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:20.427472 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:21.393374 57 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210116 16:20:22.406451 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:23.402320 57 server/init.go:472 ⋮ [n?] ‹localhost:26259› is itself waiting for init, will retry
+W210116 16:20:24.400607 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:25.401061 57 server/init.go:472 ⋮ [n?] ‹localhost:26259› is itself waiting for init, will retry
+W210116 16:20:26.402456 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:27.402261 57 server/init.go:472 ⋮ [n?] ‹localhost:26259› is itself waiting for init, will retry
+W210116 16:20:28.399097 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:29.410299 57 server/init.go:472 ⋮ [n?] ‹localhost:26259› is itself waiting for init, will retry
+W210116 16:20:30.408311 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:31.402930 57 server/init.go:472 ⋮ [n?] ‹localhost:26259› is itself waiting for init, will retry
+W210116 16:20:32.406093 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:33.400024 57 server/init.go:472 ⋮ [n?] ‹localhost:26259› is itself waiting for init, will retry
+W210116 16:20:34.399352 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:35.400325 57 server/init.go:472 ⋮ [n?] ‹localhost:26259› is itself waiting for init, will retry
+W210116 16:20:36.405761 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:37.397363 57 server/init.go:472 ⋮ [n?] ‹localhost:26259› is itself waiting for init, will retry
+W210116 16:20:38.397989 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+W210116 16:20:39.402357 57 server/init.go:472 ⋮ [n?] ‹localhost:26259› is itself waiting for init, will retry
+W210116 16:20:40.400800 57 server/init.go:472 ⋮ [n?] ‹localhost:26258› is itself waiting for init, will retry
+I210116 16:20:40.658551 23 server/init.go:266 ⋮ [n?] cluster ‹1eea99f3-f488-4602-b1df-dbb9d9b81c51› has been created
+I210116 16:20:40.658600 23 server/init.go:267 ⋮ [n?] allocated node ID: n1 (for self)
+I210116 16:20:40.659234 936 server/server.go:1416 ⋮ [n?] connecting to gossip network to verify cluster ID ‹"1eea99f3-f488-4602-b1df-dbb9d9b81c51"›
+W210116 16:20:40.679459 23 gossip/gossip.go:1494 ⋮ [n?] no incoming or outgoing connections
+I210116 16:20:40.684700 23 gossip/gossip.go:403 ⋮ [n1] NodeDescriptor set to ‹node_id:1 address:<network_field:"tcp" address_field:"localhost:26257" > attrs:<> locality:<> ServerVersion:<major_val:20 minor_val:2 patch:0 unstable:0 > build_tag:"v20.2.3" started_at:1610814040683792000 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26257" >›
+I210116 16:20:40.767529 961 gossip/client.go:124 ⋮ [n1] started gossip client to ‹localhost:26258›
+I210116 16:20:40.774075 961 gossip/client.go:131 ⋮ [n1] closing client to ‹localhost:26258›: ‹rpc error: code = Unknown desc = gossip connection refused from different cluster 1eea99f3-f488-4602-b1df-dbb9d9b81c51›
+I210116 16:20:40.807461 936 server/server.go:1419 ⋮ [n1] node connected via gossip
+W210116 16:20:40.807079 1068 kv/kvserver/store.go:1704 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] could not gossip system config: ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+(1) ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+Error types: (1) *roachpb.NotLeaseHolderError
+I210116 16:20:40.813187 23 server/node.go:430 ⋮ [n1] initialized store [n1,s1]: disk (capacity=234 GiB, available=58 GiB, used=59 KiB, logicalBytes=19 KiB), ranges=35, leases=0, queries=0.00, writes=0.00, bytesPerReplica={p10=0.00 p25=0.00 p50=0.00 p75=0.00 p90=166.00 pMax=16616.00}, writesPerReplica={p10=0.00 p25=0.00 p50=0.00 p75=0.00 p90=0.00 pMax=0.00}
+I210116 16:20:40.814376 23 kv/kvserver/stores.go:236 ⋮ [n1] read 0 node addresses from persistent storage
+I210116 16:20:40.820557 23 server/node.go:489 ⋮ [n1] started with engine type ‹2›
+I210116 16:20:40.820689 23 server/node.go:491 ⋮ [n1] started with attributes ‹[]›
+I210116 16:20:40.829260 23 server/goroutinedumper/goroutinedumper.go:120 ⋮ [n1] writing goroutine dumps to ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node1/logs/goroutine_dump›
+I210116 16:20:40.829651 23 server/heapprofiler/heapprofiler.go:49 ⋮ [n1] writing go heap profiles to ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node1/logs/heap_profiler› at least every 1h0m0s
+I210116 16:20:40.829943 23 server/heapprofiler/cgoprofiler.go:53 ⋮ [n1] to enable jmalloc profiling: "export MALLOC_CONF=prof:true" or "ln -s prof:true /etc/malloc.conf"
+I210116 16:20:40.829958 23 server/heapprofiler/statsprofiler.go:54 ⋮ [n1] writing memory stats to ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node1/logs/heap_profiler› at last every 1h0m0s
+I210116 16:20:40.830017 23 server/server.go:1536 ⋮ [n1] starting https server at ‹127.0.0.1:8080› (use: ‹localhost:8080›)
+I210116 16:20:40.830403 23 server/server.go:1543 ⋮ [n1] starting grpc/postgres server at ‹127.0.0.1:26257›
+I210116 16:20:40.830437 23 server/server.go:1544 ⋮ [n1] advertising CockroachDB node at ‹localhost:26257›
+W210116 16:20:40.866484 1068 kv/kvserver/store.go:1704 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] could not gossip system config: ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+(1) ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+Error types: (1) *roachpb.NotLeaseHolderError
+I210116 16:20:40.960716 23 sql/sqlliveness/slinstance/slinstance.go:252 ⋮ [n1] starting SQL liveness instance
+I210116 16:20:40.995051 1096 sql/temporary_schema.go:497 ⋮ [n1] running temporary object cleanup background job
+I210116 16:20:41.134314 1146 kv/kvserver/replica_rangefeed.go:608 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] RangeFeed closed timestamp is empty
+I210116 16:20:41.187968 1096 sql/temporary_schema.go:532 ⋮ [n1] found 0 temporary schemas
+I210116 16:20:41.188007 1096 sql/temporary_schema.go:535 ⋮ [n1] early exiting temporary schema cleaner as no temporary schemas were found
+I210116 16:20:41.188019 1096 sql/temporary_schema.go:536 ⋮ [n1] completed temporary object cleanup job
+I210116 16:20:41.188030 1096 sql/temporary_schema.go:614 ⋮ [n1] temporary object cleaner next scheduled to run at 2021-01-16 16:50:40.977748 +0000 UTC
+I210116 16:20:41.262055 1094 sql/sqlliveness/slstorage/slstorage.go:342 ⋮ [n1] inserted sqlliveness session ‹3afd68afb4534caf9b90054615e52818›
+I210116 16:20:41.262168 1094 sql/sqlliveness/slinstance/slinstance.go:143 ⋮ [n1] created new SQL liveness session ‹3afd68afb4534caf9b90054615e52818›
+I210116 16:20:41.268384 1092 sql/event_log.go:162 ⋮ [n1] Event: ‹"node_join"›, target: 1, info: ‹{Descriptor:{NodeID:1 Address:localhost:26257 Attrs: Locality: ServerVersion:20.2 BuildTag:v20.2.3 StartedAt:1610814040683792000 LocalityAddress:[] ClusterName: SQLAddress:localhost:26257} ClusterID:1eea99f3-f488-4602-b1df-dbb9d9b81c51 StartedAt:1610814040683792000 LastUp:1610814040683792000}›
+I210116 16:20:41.305980 1128 sql/event_log.go:162 ⋮ [n1,intExec=‹optInToDiagnosticsStatReporting›] Event: ‹"set_cluster_setting"›, target: 0, info: ‹{SettingName:diagnostics.reporting.enabled Value:true User:root}›
+I210116 16:20:41.356884 1254 sql/event_log.go:162 ⋮ [n1,intExec=‹set-setting›] Event: ‹"set_cluster_setting"›, target: 0, info: ‹{SettingName:version Value:20.2 User:root}›
+I210116 16:20:41.423759 1551 kv/kvserver/node_liveness.go:499 ⋮ [n1] created liveness record for n2
+I210116 16:20:41.423836 1551 server/node.go:1170 ⋮ [n1] allocated IDs: n2, s2
+I210116 16:20:41.440306 1638 kv/kvserver/node_liveness.go:499 ⋮ [n1] created liveness record for n3
+I210116 16:20:41.440342 1638 server/node.go:1170 ⋮ [n1] allocated IDs: n3, s3
+I210116 16:20:41.461451 32 kv/kvserver/stores.go:255 ⋮ [n1] wrote 1 node addresses to persistent storage
+I210116 16:20:41.470649 32 kv/kvserver/stores.go:255 ⋮ [n1] wrote 2 node addresses to persistent storage
+I210116 16:20:41.523726 1661 sql/event_log.go:162 ⋮ [n1,intExec=‹initializeClusterSecret›] Event: ‹"set_cluster_setting"›, target: 0, info: ‹{SettingName:cluster.secret Value:687176d5-16ec-4f50-8f0d-c01ae5c614fd User:root}›
+I210116 16:20:41.665192 1710 sql/event_log.go:162 ⋮ [n1,intExec=‹create-default-db›] Event: ‹"create_database"›, target: 50, info: ‹{DatabaseName:defaultdb Statement:CREATE DATABASE IF NOT EXISTS defaultdb User:root}›
+I210116 16:20:41.666275 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r11/1:‹/Table/1{5-6}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r11:‹/Table/1{5-6}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:41.718946 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r11/1:‹/Table/1{5-6}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:20:41.730342 2045 gossip/client.go:124 ⋮ [n1] started gossip client to ‹localhost:26259›
+I210116 16:20:41.741288 1925 sql/event_log.go:162 ⋮ [n1,intExec=‹create-default-db›] Event: ‹"create_database"›, target: 51, info: ‹{DatabaseName:postgres Statement:CREATE DATABASE IF NOT EXISTS postgres User:root}›
+I210116 16:20:41.755621 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r11/1:‹/Table/1{5-6}›] streamed LEARNER snapshot ‹6846b2ff› at applied index 16 to (n2,s2):2LEARNER in 0.00s @ ‹5.3 MiB›/s: ‹kv pairs: 6, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:41.756133 2145 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r11/1:‹/Table/1{5-6}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:20:41.926421 23 server/server_sql.go:753 ⋮ [n1] done ensuring all necessary migrations have run
+I210116 16:20:41.926852 23 server/server.go:1876 ⋮ [n1] serving sql connections
+I210116 16:20:41.927619 2188 jobs/job_scheduler.go:346 ⋮ [n1] waiting 4m0s before scheduled jobs daemon start
+I210116 16:20:41.940763 2189 server/server_update.go:55 ⋮ [n1] no need to upgrade, cluster already at the newest version
+I210116 16:20:41.946733 23 cli/start.go:670 ⋮ [config] clusterID: ‹1eea99f3-f488-4602-b1df-dbb9d9b81c51›
+I210116 16:20:41.946793 23 cli/start.go:680 ⋮ node startup completed:
+CockroachDB node starting at 2021-01-16 16:20:41.938023 +0000 UTC (took 77.5s)
+build:               CCL v20.2.3 @ 2020/12/14 18:37:58 (go1.13.14)
+webui:               ‹https://localhost:8080›
+sql:                 ‹postgresql://root@localhost:26257?sslcert=certs%2Fclient.root.crt&sslkey=certs%2Fclient.root.key&sslmode=verify-full&sslrootcert=certs%2Fca.crt›
+RPC client flags:    ‹cockroach <client cmd> --host=localhost:26257 --certs-dir=certs›
+logs:                ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node1/logs›
+temp dir:            ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node1/cockroach-temp126809257›
+external I/O path:   ‹/Users/jillianexconde/Tack/Hack-the-North-Tack/node1/extern›
+store[0]:            ‹path=/Users/jillianexconde/Tack/Hack-the-North-Tack/node1›
+storage engine:      pebble
+status:              initialized new cluster
+clusterID:           ‹1eea99f3-f488-4602-b1df-dbb9d9b81c51›
+nodeID:              1
+I210116 16:20:42.039400 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r11/1:‹/Table/1{5-6}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r11:‹/Table/1{5-6}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:20:42.130534 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r11/1:‹/Table/1{5-6}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:20:42.154306 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r11/1:‹/Table/1{5-6}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r11:‹/Table/1{5-6}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:20:42.236662 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r11/1:‹/Table/1{5-6}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:20:42.293155 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r11/1:‹/Table/1{5-6}›] streamed LEARNER snapshot ‹d7ff4498› at applied index 20 to (n3,s3):3LEARNER in 0.00s @ ‹17 MiB›/s: ‹kv pairs: 10, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:42.293307 2310 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r11/1:‹/Table/1{5-6}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:20:42.295438 939 gossip/gossip.go:1508 ⋮ [n1] node has connected to cluster via gossip
+I210116 16:20:42.415662 939 kv/kvserver/stores.go:255 ⋮ [n1] wrote 2 node addresses to persistent storage
+I210116 16:20:42.661617 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r11/1:‹/Table/1{5-6}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r11:‹/Table/1{5-6}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:20:42.709399 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r11/1:‹/Table/1{5-6}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:20:42.820426 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r7/1:‹/Table/1{1-2}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r7:‹/Table/1{1-2}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:42.944823 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r7/1:‹/Table/1{1-2}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:43.345834 2391 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r7/1:‹/Table/1{1-2}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:43.349395 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r7/1:‹/Table/1{1-2}›] streamed LEARNER snapshot ‹a9c56ea9› at applied index 20 to (n3,s3):2LEARNER in 0.00s @ ‹3.3 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:43.596980 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r7/1:‹/Table/1{1-2}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r7:‹/Table/1{1-2}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:43.627494 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r7/1:‹/Table/1{1-2}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:43.680857 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r7/1:‹/Table/1{1-2}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r7:‹/Table/1{1-2}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:43.781755 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r7/1:‹/Table/1{1-2}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:43.881715 2466 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r7/1:‹/Table/1{1-2}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:43.881946 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r7/1:‹/Table/1{1-2}›] streamed LEARNER snapshot ‹7c826d21› at applied index 24 to (n2,s2):3LEARNER in 0.00s @ ‹14 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.04s
+I210116 16:20:44.193181 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r7/1:‹/Table/1{1-2}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r7:‹/Table/1{1-2}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:44.289392 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r7/1:‹/Table/1{1-2}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:44.349432 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r19/1:‹/Table/2{3-4}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r19:‹/Table/2{3-4}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:44.413499 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r19/1:‹/Table/2{3-4}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:44.471302 2490 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r19/1:‹/Table/2{3-4}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:44.471861 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r19/1:‹/Table/2{3-4}›] streamed LEARNER snapshot ‹c1820f9a› at applied index 18 to (n3,s3):2LEARNER in 0.00s @ ‹8.3 MiB›/s: ‹kv pairs: 10, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:44.685032 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r19/1:‹/Table/2{3-4}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r19:‹/Table/2{3-4}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:44.708762 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r19/1:‹/Table/2{3-4}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:44.736731 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r19/1:‹/Table/2{3-4}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r19:‹/Table/2{3-4}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:44.831027 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r19/1:‹/Table/2{3-4}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:44.885720 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r19/1:‹/Table/2{3-4}›] streamed LEARNER snapshot ‹1a4423b6› at applied index 23 to (n2,s2):3LEARNER in 0.00s @ ‹19 MiB›/s: ‹kv pairs: 14, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:44.885983 2523 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r19/1:‹/Table/2{3-4}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:44.997086 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r19/1:‹/Table/2{3-4}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r19:‹/Table/2{3-4}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:45.046528 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r19/1:‹/Table/2{3-4}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:45.069351 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r26/1:‹/NamespaceTable/{30-Max}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r26:‹/NamespaceTable/{30-Max}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:45.115004 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r26/1:‹/NamespaceTable/{30-Max}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:45.154798 2507 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r26/1:‹/NamespaceTable/{30-Max}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:45.155304 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r26/1:‹/NamespaceTable/{30-Max}›] streamed LEARNER snapshot ‹db0f2027› at applied index 24 to (n3,s3):2LEARNER in 0.00s @ ‹19 MiB›/s: ‹kv pairs: 41, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:45.251712 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r26/1:‹/NamespaceTable/{30-Max}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r26:‹/NamespaceTable/{30-Max}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:45.280083 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r26/1:‹/NamespaceTable/{30-Max}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:45.309088 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r26/1:‹/NamespaceTable/{30-Max}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r26:‹/NamespaceTable/{30-Max}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:45.361389 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r26/1:‹/NamespaceTable/{30-Max}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:45.378844 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r26/1:‹/NamespaceTable/{30-Max}›] streamed LEARNER snapshot ‹8ce2678d› at applied index 28 to (n2,s2):3LEARNER in 0.00s @ ‹6.9 MiB›/s: ‹kv pairs: 45, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:45.394348 2571 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r26/1:‹/NamespaceTable/{30-Max}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:45.513118 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r26/1:‹/NamespaceTable/{30-Max}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r26:‹/NamespaceTable/{30-Max}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:45.541154 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r26/1:‹/NamespaceTable/{30-Max}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:45.598284 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r35/1:‹/{Table/39-Max}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r35:‹/{Table/39-Max}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:45.687999 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r35/1:‹/{Table/39-Max}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:45.713192 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r35/1:‹/{Table/39-Max}›] streamed LEARNER snapshot ‹f07cef03› at applied index 26 to (n3,s3):2LEARNER in 0.00s @ ‹5.6 MiB›/s: ‹kv pairs: 9, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:45.720204 2588 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r35/1:‹/{Table/39-Max}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:45.858272 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r35/1:‹/{Table/39-Max}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r35:‹/{Table/39-Max}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:45.881129 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r35/1:‹/{Table/39-Max}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:45.907759 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r35/1:‹/{Table/39-Max}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r35:‹/{Table/39-Max}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:45.975048 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r35/1:‹/{Table/39-Max}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:45.989594 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r35/1:‹/{Table/39-Max}›] streamed LEARNER snapshot ‹45c51502› at applied index 32 to (n2,s2):3LEARNER in 0.00s @ ‹13 MiB›/s: ‹kv pairs: 14, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:45.989671 2609 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r35/1:‹/{Table/39-Max}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:46.108074 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r35/1:‹/{Table/39-Max}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r35:‹/{Table/39-Max}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:46.165113 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r35/1:‹/{Table/39-Max}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:46.203426 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r8/1:‹/Table/1{2-3}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r8:‹/Table/1{2-3}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:46.251376 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r8/1:‹/Table/1{2-3}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:46.268100 2667 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r8/1:‹/Table/1{2-3}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:46.268127 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r8/1:‹/Table/1{2-3}›] streamed LEARNER snapshot ‹bbcebf03› at applied index 37 to (n3,s3):2LEARNER in 0.00s @ ‹34 MiB›/s: ‹kv pairs: 46, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:46.406018 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r8/1:‹/Table/1{2-3}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r8:‹/Table/1{2-3}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:46.436920 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r8/1:‹/Table/1{2-3}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:46.465823 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r8/1:‹/Table/1{2-3}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r8:‹/Table/1{2-3}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:46.529080 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r8/1:‹/Table/1{2-3}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:46.549960 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r8/1:‹/Table/1{2-3}›] streamed LEARNER snapshot ‹f0e3aaad› at applied index 41 to (n2,s2):3LEARNER in 0.00s @ ‹42 MiB›/s: ‹kv pairs: 50, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:46.558952 2738 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r8/1:‹/Table/1{2-3}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:46.665264 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r8/1:‹/Table/1{2-3}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r8:‹/Table/1{2-3}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:46.700604 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r8/1:‹/Table/1{2-3}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:46.783013 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r27/1:‹/{NamespaceTab…-Table/32}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r27:‹/{NamespaceTable/Max-Table/32}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:46.877293 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r27/1:‹/{NamespaceTab…-Table/32}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:46.904367 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r27/1:‹/{NamespaceTab…-Table/32}›] streamed LEARNER snapshot ‹232af5f2› at applied index 16 to (n3,s3):2LEARNER in 0.00s @ ‹10 MiB›/s: ‹kv pairs: 6, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:46.906465 2759 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r27/1:‹/{NamespaceTab…-Table/32}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:47.040212 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r27/1:‹/{NamespaceTab…-Table/32}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r27:‹/{NamespaceTable/Max-Table/32}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:47.070147 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r27/1:‹/{NamespaceTab…-Table/32}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:47.095774 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r27/1:‹/{NamespaceTab…-Table/32}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r27:‹/{NamespaceTable/Max-Table/32}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:47.130808 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r27/1:‹/{NamespaceTab…-Table/32}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:47.146293 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r27/1:‹/{NamespaceTab…-Table/32}›] streamed LEARNER snapshot ‹c2d2a7df› at applied index 20 to (n2,s2):3LEARNER in 0.00s @ ‹8.5 MiB›/s: ‹kv pairs: 10, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:47.151207 2784 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r27/1:‹/{NamespaceTab…-Table/32}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:47.253823 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r27/1:‹/{NamespaceTab…-Table/32}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r27:‹/{NamespaceTable/Max-Table/32}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:47.277701 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r27/1:‹/{NamespaceTab…-Table/32}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:47.303697 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r31/1:‹/Table/3{5-6}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r31:‹/Table/3{5-6}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:47.337957 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r31/1:‹/Table/3{5-6}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:47.365699 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r31/1:‹/Table/3{5-6}›] streamed LEARNER snapshot ‹c3c78027› at applied index 16 to (n3,s3):2LEARNER in 0.00s @ ‹5.5 MiB›/s: ‹kv pairs: 6, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:47.366365 2835 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r31/1:‹/Table/3{5-6}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:47.468776 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r31/1:‹/Table/3{5-6}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r31:‹/Table/3{5-6}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:47.508768 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r31/1:‹/Table/3{5-6}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:47.529112 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r31/1:‹/Table/3{5-6}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r31:‹/Table/3{5-6}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:47.559491 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r31/1:‹/Table/3{5-6}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:47.580519 2816 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r31/1:‹/Table/3{5-6}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:47.580953 1153 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r31/1:‹/Table/3{5-6}›] streamed LEARNER snapshot ‹7403842a› at applied index 20 to (n2,s2):3LEARNER in 0.00s @ ‹10 MiB›/s: ‹kv pairs: 10, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:47.684448 1153 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r31/1:‹/Table/3{5-6}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r31:‹/Table/3{5-6}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:47.715137 1153 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r31/1:‹/Table/3{5-6}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:47.734584 1153 kv/kvserver/queue.go:1187 ⋮ [n1,replicate] purgatory is now empty
+I210116 16:20:47.735055 2882 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r9/1:‹/Table/1{3-4}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r9:‹/Table/1{3-4}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:47.763847 2882 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r9/1:‹/Table/1{3-4}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:47.779100 2842 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r9/1:‹/Table/1{3-4}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:47.779248 2882 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r9/1:‹/Table/1{3-4}›] streamed LEARNER snapshot ‹9b94d9e6› at applied index 104 to (n3,s3):2LEARNER in 0.00s @ ‹69 MiB›/s: ‹kv pairs: 171, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:47.877290 2882 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r9/1:‹/Table/1{3-4}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r9:‹/Table/1{3-4}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:47.914709 2882 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r9/1:‹/Table/1{3-4}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:47.937200 2882 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r9/1:‹/Table/1{3-4}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r9:‹/Table/1{3-4}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:47.996367 2882 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r9/1:‹/Table/1{3-4}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:48.032311 2917 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r9/1:‹/Table/1{3-4}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:48.032724 2882 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r9/1:‹/Table/1{3-4}›] streamed LEARNER snapshot ‹dca78194› at applied index 110 to (n2,s2):3LEARNER in 0.00s @ ‹82 MiB›/s: ‹kv pairs: 185, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:48.131726 2882 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r9/1:‹/Table/1{3-4}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r9:‹/Table/1{3-4}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:48.183650 2882 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r9/1:‹/Table/1{3-4}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:48.266501 2946 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r17/1:‹/Table/2{1-2}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r17:‹/Table/2{1-2}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:48.378689 2946 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r17/1:‹/Table/2{1-2}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:48.429018 2953 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r17/1:‹/Table/2{1-2}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:48.429219 2946 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r17/1:‹/Table/2{1-2}›] streamed LEARNER snapshot ‹4819f105› at applied index 22 to (n3,s3):2LEARNER in 0.00s @ ‹4.1 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.04s
+I210116 16:20:48.533019 2946 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r17/1:‹/Table/2{1-2}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r17:‹/Table/2{1-2}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:48.566658 2946 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r17/1:‹/Table/2{1-2}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:48.593573 2946 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r17/1:‹/Table/2{1-2}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r17:‹/Table/2{1-2}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:48.652374 2946 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r17/1:‹/Table/2{1-2}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:48.679930 2946 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r17/1:‹/Table/2{1-2}›] streamed LEARNER snapshot ‹b5366b02› at applied index 26 to (n2,s2):3LEARNER in 0.00s @ ‹14 MiB›/s: ‹kv pairs: 15, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:48.679991 2923 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r17/1:‹/Table/2{1-2}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:48.778721 2946 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r17/1:‹/Table/2{1-2}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r17:‹/Table/2{1-2}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:48.832363 2946 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r17/1:‹/Table/2{1-2}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:48.868995 2964 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r16/1:‹/Table/2{0-1}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r16:‹/Table/2{0-1}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:48.934058 2964 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r16/1:‹/Table/2{0-1}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+W210116 16:20:48.935403 2927 kv/kvserver/intentresolver/intent_resolver.go:462 ⋮ failed to push during intent resolution: ‹failed to push meta={id=d770533e key=/Local/Range/Table/20/RangeDescriptor pri=0.00494653 epo=0 ts=1610814048.868670000,0 min=1610814048.868670000,0 seq=7} lock=true stat=PENDING rts=0,0 wto=false max=0,0›
+I210116 16:20:48.964788 2992 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r16/1:‹/Table/2{0-1}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:48.964868 2964 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r16/1:‹/Table/2{0-1}›] streamed LEARNER snapshot ‹816766be› at applied index 18 to (n3,s3):2LEARNER in 0.00s @ ‹7.6 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:20:49.040166 2964 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r16/1:‹/Table/2{0-1}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r16:‹/Table/2{0-1}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:49.077328 2964 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r16/1:‹/Table/2{0-1}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:49.102405 2964 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r16/1:‹/Table/2{0-1}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r16:‹/Table/2{0-1}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:49.164568 2964 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r16/1:‹/Table/2{0-1}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:49.194076 2970 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r16/1:‹/Table/2{0-1}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:49.194064 2964 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r16/1:‹/Table/2{0-1}›] streamed LEARNER snapshot ‹d74376c5› at applied index 22 to (n2,s2):3LEARNER in 0.00s @ ‹5.2 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:20:49.306552 2964 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r16/1:‹/Table/2{0-1}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r16:‹/Table/2{0-1}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:49.350584 2964 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r16/1:‹/Table/2{0-1}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:49.387596 3043 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r29/1:‹/Table/3{3-4}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r29:‹/Table/3{3-4}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:49.437848 3043 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r29/1:‹/Table/3{3-4}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:20:49.497981 3024 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r29/1:‹/Table/3{3-4}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:20:49.497996 3043 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r29/1:‹/Table/3{3-4}›] streamed LEARNER snapshot ‹f632fd64› at applied index 16 to (n2,s2):2LEARNER in 0.00s @ ‹3.2 MiB›/s: ‹kv pairs: 6, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:49.604853 3043 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r29/1:‹/Table/3{3-4}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r29:‹/Table/3{3-4}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:20:49.642277 3043 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r29/1:‹/Table/3{3-4}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:20:49.670247 3043 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r29/1:‹/Table/3{3-4}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r29:‹/Table/3{3-4}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:20:49.727057 3043 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r29/1:‹/Table/3{3-4}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:20:49.744118 3075 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r29/1:‹/Table/3{3-4}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:20:49.744123 3043 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r29/1:‹/Table/3{3-4}›] streamed LEARNER snapshot ‹7e987cb2› at applied index 20 to (n3,s3):3LEARNER in 0.00s @ ‹9.7 MiB›/s: ‹kv pairs: 10, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:49.888533 3043 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r29/1:‹/Table/3{3-4}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r29:‹/Table/3{3-4}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:20:49.933833 3043 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r29/1:‹/Table/3{3-4}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:20:49.961200 3094 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r5/1:‹/{Systemtse-Table/System…}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r5:‹/{Systemtse-Table/SystemConfigSpan/Start}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:50.010144 3094 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r5/1:‹/{Systemtse-Table/System…}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:50.050300 3094 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r5/1:‹/{Systemtse-Table/System…}›] streamed LEARNER snapshot ‹254f8946› at applied index 19 to (n3,s3):2LEARNER in 0.00s @ ‹10 MiB›/s: ‹kv pairs: 8, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:50.050397 3073 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r5/1:‹/{Systemtse-Table/System…}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:50.158385 3094 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r5/1:‹/{Systemtse-Table/System…}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r5:‹/{Systemtse-Table/SystemConfigSpan/Start}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:50.189869 3094 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r5/1:‹/{Systemtse-Table/System…}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:50.211355 3094 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r5/1:‹/{Systemtse-Table/System…}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r5:‹/{Systemtse-Table/SystemConfigSpan/Start}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:50.279199 3094 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r5/1:‹/{Systemtse-Table/System…}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:50.308291 3094 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r5/1:‹/{Systemtse-Table/System…}›] streamed LEARNER snapshot ‹b03d38b2› at applied index 23 to (n2,s2):3LEARNER in 0.00s @ ‹16 MiB›/s: ‹kv pairs: 12, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:50.308354 3105 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r5/1:‹/{Systemtse-Table/System…}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:50.423362 3094 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r5/1:‹/{Systemtse-Table/System…}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r5:‹/{Systemtse-Table/SystemConfigSpan/Start}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:50.476585 3094 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r5/1:‹/{Systemtse-Table/System…}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:50.516548 3111 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r32/1:‹/Table/3{6-7}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r32:‹/Table/3{6-7}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:50.564974 3111 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r32/1:‹/Table/3{6-7}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:50.609097 3121 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r32/1:‹/Table/3{6-7}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:50.609076 3111 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r32/1:‹/Table/3{6-7}›] streamed LEARNER snapshot ‹07d85695› at applied index 19 to (n3,s3):2LEARNER in 0.00s @ ‹8.8 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:50.762456 3111 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r32/1:‹/Table/3{6-7}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r32:‹/Table/3{6-7}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:50.791894 3111 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r32/1:‹/Table/3{6-7}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:50.822144 3111 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r32/1:‹/Table/3{6-7}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r32:‹/Table/3{6-7}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+W210116 16:20:50.833879 1005 server/status/runtime.go:449 ⋮ [n1] unable to get file descriptor usage (will not try again): ‹not implemented on darwin›
+I210116 16:20:50.842413 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 101 MiB RSS, 281 goroutines, 22 MiB/28 MiB/53 MiB GO alloc/idle/total, 5.1 MiB/7.7 MiB CGO alloc/total, 0.0 CGO/sec, 0.0/0.0 %(u/s)time, 0.0 %gc (12x), 2.2 MiB/11 MiB (r/w)net
+I210116 16:20:50.887493 3111 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r32/1:‹/Table/3{6-7}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:50.913142 3164 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r32/1:‹/Table/3{6-7}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:50.913183 3111 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r32/1:‹/Table/3{6-7}›] streamed LEARNER snapshot ‹44692dfa› at applied index 23 to (n2,s2):3LEARNER in 0.00s @ ‹13 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+W210116 16:20:50.962340 1037 server/node.go:785 ⋮ [n1,summaries] health alerts detected: ‹{Alerts:[{StoreID:1 Category:METRICS Description:ranges.underreplicated Value:22}]}›
+I210116 16:20:51.085514 3111 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r32/1:‹/Table/3{6-7}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r32:‹/Table/3{6-7}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:51.145403 3111 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r32/1:‹/Table/3{6-7}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:51.176487 3220 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r10/1:‹/Table/1{4-5}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r10:‹/Table/1{4-5}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:51.227249 3220 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r10/1:‹/Table/1{4-5}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:20:51.255112 3220 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r10/1:‹/Table/1{4-5}›] streamed LEARNER snapshot ‹afc5b527› at applied index 18 to (n2,s2):2LEARNER in 0.00s @ ‹7.4 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:51.255196 3209 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r10/1:‹/Table/1{4-5}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:20:51.389915 3220 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r10/1:‹/Table/1{4-5}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r10:‹/Table/1{4-5}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:20:51.431899 3220 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r10/1:‹/Table/1{4-5}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:20:51.461919 3220 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r10/1:‹/Table/1{4-5}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r10:‹/Table/1{4-5}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:20:51.530992 3220 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r10/1:‹/Table/1{4-5}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:20:51.559170 3220 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r10/1:‹/Table/1{4-5}›] streamed LEARNER snapshot ‹54310424› at applied index 22 to (n3,s3):3LEARNER in 0.00s @ ‹9.0 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:20:51.559403 3259 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r10/1:‹/Table/1{4-5}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:20:51.728388 3220 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r10/1:‹/Table/1{4-5}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r10:‹/Table/1{4-5}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:20:51.794420 3220 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r10/1:‹/Table/1{4-5}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:20:51.862846 3346 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r1/1:‹/{Min-System/NodeL…}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r1:‹/{Min-System/NodeLiveness}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:51.939716 3346 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:20:51.959566 3346 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r1/1:‹/{Min-System/NodeL…}›] streamed LEARNER snapshot ‹fccc462a› at applied index 185 to (n2,s2):2LEARNER in 0.00s @ ‹23 MiB›/s: ‹kv pairs: 105, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:51.961315 3289 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r1/1:‹/{Min-System/NodeL…}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:20:52.059935 3346 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r1/1:‹/{Min-System/NodeL…}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r1:‹/{Min-System/NodeLiveness}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:20:52.109731 3346 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:20:52.124313 3346 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r1/1:‹/{Min-System/NodeL…}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r1:‹/{Min-System/NodeLiveness}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:20:52.178876 3346 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:20:52.202006 3410 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r1/1:‹/{Min-System/NodeL…}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:20:52.202208 3346 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r1/1:‹/{Min-System/NodeL…}›] streamed LEARNER snapshot ‹4fa0a53b› at applied index 191 to (n3,s3):3LEARNER in 0.00s @ ‹11 MiB›/s: ‹kv pairs: 113, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:52.262887 3412 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r1/1:‹/{Min-System/NodeL…}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:20:52.341525 3346 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r1/1:‹/{Min-System/NodeL…}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r1:‹/{Min-System/NodeLiveness}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:20:52.393408 3346 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r1/1:‹/{Min-System/NodeL…}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:20:52.412869 3398 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r25/1:‹/{Table/29-NamespaceTab…}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r25:‹/{Table/29-NamespaceTable/30}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:52.468888 3398 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r25/1:‹/{Table/29-NamespaceTab…}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:52.504630 3398 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r25/1:‹/{Table/29-NamespaceTab…}›] streamed LEARNER snapshot ‹308a0d7b› at applied index 18 to (n3,s3):2LEARNER in 0.00s @ ‹4.8 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:52.504636 3369 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r25/1:‹/{Table/29-NamespaceTab…}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:52.640190 3398 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r25/1:‹/{Table/29-NamespaceTab…}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r25:‹/{Table/29-NamespaceTable/30}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:52.683164 3398 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r25/1:‹/{Table/29-NamespaceTab…}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:52.719654 3398 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r25/1:‹/{Table/29-NamespaceTab…}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r25:‹/{Table/29-NamespaceTable/30}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:52.793417 3398 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r25/1:‹/{Table/29-NamespaceTab…}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:52.817072 3424 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r25/1:‹/{Table/29-NamespaceTab…}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:52.817062 3398 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r25/1:‹/{Table/29-NamespaceTab…}›] streamed LEARNER snapshot ‹f98be2d3› at applied index 22 to (n2,s2):3LEARNER in 0.00s @ ‹10 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:52.958881 3398 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r25/1:‹/{Table/29-NamespaceTab…}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r25:‹/{Table/29-NamespaceTable/30}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:52.992058 3398 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r25/1:‹/{Table/29-NamespaceTab…}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:53.043466 3463 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r14/1:‹/Table/1{8-9}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r14:‹/Table/1{8-9}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:53.085724 3463 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r14/1:‹/Table/1{8-9}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:53.118135 3437 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r14/1:‹/Table/1{8-9}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:53.118147 3463 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r14/1:‹/Table/1{8-9}›] streamed LEARNER snapshot ‹7f039650› at applied index 18 to (n3,s3):2LEARNER in 0.00s @ ‹7.6 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:53.217953 3463 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r14/1:‹/Table/1{8-9}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r14:‹/Table/1{8-9}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:53.288512 3463 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r14/1:‹/Table/1{8-9}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:53.312456 3463 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r14/1:‹/Table/1{8-9}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r14:‹/Table/1{8-9}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:53.382917 3463 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r14/1:‹/Table/1{8-9}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:53.410952 3463 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r14/1:‹/Table/1{8-9}›] streamed LEARNER snapshot ‹4872ef59› at applied index 22 to (n2,s2):3LEARNER in 0.00s @ ‹14 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:53.411038 3494 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r14/1:‹/Table/1{8-9}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:53.562698 3463 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r14/1:‹/Table/1{8-9}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r14:‹/Table/1{8-9}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:53.607844 3463 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r14/1:‹/Table/1{8-9}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:53.629140 3508 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r30/1:‹/Table/3{4-5}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r30:‹/Table/3{4-5}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:53.693492 3508 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r30/1:‹/Table/3{4-5}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:20:53.708686 3508 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r30/1:‹/Table/3{4-5}›] streamed LEARNER snapshot ‹c29deadb› at applied index 18 to (n2,s2):2LEARNER in 0.00s @ ‹5.3 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:53.708786 3481 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r30/1:‹/Table/3{4-5}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:20:53.808317 3508 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r30/1:‹/Table/3{4-5}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r30:‹/Table/3{4-5}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:20:53.868632 3508 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r30/1:‹/Table/3{4-5}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:20:53.901826 3508 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r30/1:‹/Table/3{4-5}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r30:‹/Table/3{4-5}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:20:53.957977 3508 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r30/1:‹/Table/3{4-5}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:20:53.983148 3508 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r30/1:‹/Table/3{4-5}›] streamed LEARNER snapshot ‹06d7d777› at applied index 22 to (n3,s3):3LEARNER in 0.00s @ ‹13 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:54.000869 3519 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r30/1:‹/Table/3{4-5}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:20:54.128083 3508 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r30/1:‹/Table/3{4-5}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r30:‹/Table/3{4-5}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:20:54.163891 3508 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r30/1:‹/Table/3{4-5}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:20:54.222774 3521 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r6/1:‹/Table/{SystemCon…-11}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r6:‹/Table/{SystemConfigSpan/Start-11}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:54.273265 3521 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:20:54.309560 3551 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r6/1:‹/Table/{SystemCon…-11}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:20:54.309733 3521 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r6/1:‹/Table/{SystemCon…-11}›] streamed LEARNER snapshot ‹969c1bf5› at applied index 37 to (n2,s2):2LEARNER in 0.00s @ ‹78 MiB›/s: ‹kv pairs: 56, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:54.443934 3521 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r6/1:‹/Table/{SystemCon…-11}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r6:‹/Table/{SystemConfigSpan/Start-11}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:20:54.507073 3521 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:20:54.523205 3521 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r6/1:‹/Table/{SystemCon…-11}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r6:‹/Table/{SystemConfigSpan/Start-11}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:20:54.592939 3521 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:20:54.606466 3521 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r6/1:‹/Table/{SystemCon…-11}›] streamed LEARNER snapshot ‹e2ad31ad› at applied index 41 to (n3,s3):3LEARNER in 0.00s @ ‹59 MiB›/s: ‹kv pairs: 60, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:54.621929 3578 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r6/1:‹/Table/{SystemCon…-11}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:20:54.743635 3521 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r6/1:‹/Table/{SystemCon…-11}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r6:‹/Table/{SystemConfigSpan/Start-11}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:20:54.782625 3521 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:20:54.816417 3567 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r22/1:‹/Table/2{6-7}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r22:‹/Table/2{6-7}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:54.892359 3567 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r22/1:‹/Table/2{6-7}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:54.922099 3624 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r22/1:‹/Table/2{6-7}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:54.922071 3567 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r22/1:‹/Table/2{6-7}›] streamed LEARNER snapshot ‹cfde8535› at applied index 18 to (n3,s3):2LEARNER in 0.00s @ ‹5.0 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:20:55.046792 3567 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r22/1:‹/Table/2{6-7}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r22:‹/Table/2{6-7}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:55.104817 3567 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r22/1:‹/Table/2{6-7}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:55.126216 3567 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r22/1:‹/Table/2{6-7}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r22:‹/Table/2{6-7}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:55.180492 3567 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r22/1:‹/Table/2{6-7}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:55.205666 3567 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r22/1:‹/Table/2{6-7}›] streamed LEARNER snapshot ‹070a7251› at applied index 22 to (n2,s2):3LEARNER in 0.00s @ ‹14 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:55.219908 3652 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r22/1:‹/Table/2{6-7}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:55.388903 3567 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r22/1:‹/Table/2{6-7}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r22:‹/Table/2{6-7}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:55.440595 3567 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r22/1:‹/Table/2{6-7}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:55.467085 3656 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r3/1:‹/System/{NodeLive…-tsd}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r3:‹/System/{NodeLivenessMax-tsd}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:55.551657 3656 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:55.570891 3685 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r3/1:‹/System/{NodeLive…-tsd}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:55.571440 3656 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r3/1:‹/System/{NodeLive…-tsd}›] streamed LEARNER snapshot ‹9cbc2a81› at applied index 67 to (n3,s3):2LEARNER in 0.00s @ ‹130 MiB›/s: ‹kv pairs: 41, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:55.679594 3656 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r3/1:‹/System/{NodeLive…-tsd}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r3:‹/System/{NodeLivenessMax-tsd}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:55.732683 3656 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:55.764438 3656 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r3/1:‹/System/{NodeLive…-tsd}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r3:‹/System/{NodeLivenessMax-tsd}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:55.811705 3656 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:55.866429 3677 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r3/1:‹/System/{NodeLive…-tsd}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:55.866941 3656 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r3/1:‹/System/{NodeLive…-tsd}›] streamed LEARNER snapshot ‹26502e90› at applied index 71 to (n2,s2):3LEARNER in 0.00s @ ‹145 MiB›/s: ‹kv pairs: 45, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:20:56.063435 3656 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r3/1:‹/System/{NodeLive…-tsd}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r3:‹/System/{NodeLivenessMax-tsd}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:56.113910 3656 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r3/1:‹/System/{NodeLive…-tsd}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:56.937180 3740 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r4/1:‹/System{/tsd-tse}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r4:‹/System{/tsd-tse}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:57.019378 3740 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:57.039553 3783 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r4/1:‹/System{/tsd-tse}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:57.062457 3779 kv/kvserver/replica_consistency.go:257 ⋮ [n1,consistencyChecker,s1,r4/1:‹/System{/tsd-tse}›] triggering stats recomputation to resolve delta of {ContainsEstimates:9588 LastUpdateNanos:1610814051674274000 IntentAge:0 GCBytesAge:0 LiveBytes:-43296 LiveCount:-2406 KeyBytes:-122028 KeyCount:-2406 ValBytes:78732 ValCount:-2406 IntentBytes:0 IntentCount:0 SysBytes:0 SysCount:0 AbortSpanBytes:0}
+I210116 16:20:57.081377 3740 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r4/1:‹/System{/tsd-tse}›] streamed LEARNER snapshot ‹a62af995› at applied index 36 to (n3,s3):2LEARNER in 0.04s @ ‹6.2 MiB›/s: ‹kv pairs: 2414, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:57.185491 3740 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r4/1:‹/System{/tsd-tse}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r4:‹/System{/tsd-tse}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:57.256080 3740 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:57.272981 3740 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r4/1:‹/System{/tsd-tse}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r4:‹/System{/tsd-tse}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:57.343615 3740 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:57.387485 3792 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r4/1:‹/System{/tsd-tse}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:57.441592 3740 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r4/1:‹/System{/tsd-tse}›] streamed LEARNER snapshot ‹644d8c77› at applied index 41 to (n2,s2):3LEARNER in 0.05s @ ‹4.8 MiB›/s: ‹kv pairs: 2418, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:20:57.537349 3740 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r4/1:‹/System{/tsd-tse}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r4:‹/System{/tsd-tse}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:57.607153 3740 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r4/1:‹/System{/tsd-tse}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:57.967264 3761 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r20/1:‹/Table/2{4-5}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r20:‹/Table/2{4-5}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:58.016747 3761 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r20/1:‹/Table/2{4-5}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:58.048936 3818 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r20/1:‹/Table/2{4-5}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:58.049144 3761 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r20/1:‹/Table/2{4-5}›] streamed LEARNER snapshot ‹bdef2b8a› at applied index 18 to (n3,s3):2LEARNER in 0.00s @ ‹6.5 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:20:58.166623 3761 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r20/1:‹/Table/2{4-5}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r20:‹/Table/2{4-5}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:58.221013 3761 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r20/1:‹/Table/2{4-5}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:58.242626 3761 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r20/1:‹/Table/2{4-5}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r20:‹/Table/2{4-5}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:58.335974 3761 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r20/1:‹/Table/2{4-5}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:58.355311 3761 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r20/1:‹/Table/2{4-5}›] streamed LEARNER snapshot ‹c9b26fbf› at applied index 23 to (n2,s2):3LEARNER in 0.00s @ ‹13 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:20:58.369240 3825 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r20/1:‹/Table/2{4-5}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:58.484547 3761 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r20/1:‹/Table/2{4-5}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r20:‹/Table/2{4-5}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:58.571159 3761 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r20/1:‹/Table/2{4-5}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:58.942866 3877 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r2/1:‹/System/NodeLiveness{-Max}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r2:‹/System/NodeLiveness{-Max}› [(n1,s1):1, next=2, gen=0]
+I210116 16:20:58.996179 3877 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:20:59.025802 3865 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r2/1:‹/System/NodeLiveness{-Max}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:20:59.025735 3877 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r2/1:‹/System/NodeLiveness{-Max}›] streamed LEARNER snapshot ‹363aa015› at applied index 43 to (n3,s3):2LEARNER in 0.00s @ ‹12 MiB›/s: ‹kv pairs: 23, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:20:59.164334 3877 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r2/1:‹/System/NodeLiveness{-Max}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r2:‹/System/NodeLiveness{-Max}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:20:59.204770 3877 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:20:59.221847 3877 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r2/1:‹/System/NodeLiveness{-Max}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r2:‹/System/NodeLiveness{-Max}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:20:59.299957 3877 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:20:59.326283 3886 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r2/1:‹/System/NodeLiveness{-Max}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:20:59.326270 3877 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r2/1:‹/System/NodeLiveness{-Max}›] streamed LEARNER snapshot ‹d0aebb2a› at applied index 48 to (n2,s2):3LEARNER in 0.00s @ ‹13 MiB›/s: ‹kv pairs: 27, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:20:59.472082 3877 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r2/1:‹/System/NodeLiveness{-Max}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r2:‹/System/NodeLiveness{-Max}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:20:59.523845 3877 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r2/1:‹/System/NodeLiveness{-Max}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:20:59.958189 3955 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r12/1:‹/Table/1{6-7}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r12:‹/Table/1{6-7}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:00.003122 3955 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r12/1:‹/Table/1{6-7}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:21:00.021235 3955 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r12/1:‹/Table/1{6-7}›] streamed LEARNER snapshot ‹92b1875e› at applied index 17 to (n3,s3):2LEARNER in 0.00s @ ‹7.3 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:21:00.021359 3946 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r12/1:‹/Table/1{6-7}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:21:00.145791 3955 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r12/1:‹/Table/1{6-7}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r12:‹/Table/1{6-7}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:21:00.179877 3955 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r12/1:‹/Table/1{6-7}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:21:00.187931 3955 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r12/1:‹/Table/1{6-7}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r12:‹/Table/1{6-7}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:21:00.260799 3955 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r12/1:‹/Table/1{6-7}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:21:00.277607 3955 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r12/1:‹/Table/1{6-7}›] streamed LEARNER snapshot ‹eb8e558c› at applied index 21 to (n2,s2):3LEARNER in 0.00s @ ‹14 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:21:00.283738 4003 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r12/1:‹/Table/1{6-7}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:21:00.391202 3955 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r12/1:‹/Table/1{6-7}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r12:‹/Table/1{6-7}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:21:00.428069 3955 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r12/1:‹/Table/1{6-7}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:21:00.824090 1000 kv/kvserver/store.go:2638 ⋮ [n1,s1] sstables (read amplification = 0):
+‹›
+I210116 16:21:00.824487 1000 kv/kvserver/store.go:2639 ⋮ [n1,s1] ‹›
+‹__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp›
+‹    WAL         4   2.3 M       -   2.3 M       -       -       -       -   2.3 M       -       -       -     1.0›
+‹      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      6         0     0 B       -     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹  total         0     0 B       -   2.3 M     0 B       0     0 B       0   2.3 M       0     0 B       0     1.0›
+‹  flush         0›
+‹compact         0     0 B          (size == estimated-debt)›
+‹ memtbl         4   3.8 M›
+‹zmemtbl         0     0 B›
+‹   ztbl         0     0 B›
+‹ bcache         0     0 B    0.0%  (score == hit-rate)›
+‹ tcache         0     0 B    0.0%  (score == hit-rate)›
+‹ titers         0›
+‹ filter         -       -    0.0%  (score == utility)›
+I210116 16:21:00.847494 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 114 MiB RSS, 275 goroutines, 31 MiB/23 MiB/63 MiB GO alloc/idle/total, 6.8 MiB/9.8 MiB CGO alloc/total, 0.7 CGO/sec, 8.5/4.2 %(u/s)time, 0.0 %gc (3x), 1.5 MiB/2.8 MiB (r/w)net
+W210116 16:21:00.957158 1037 server/node.go:785 ⋮ [n1,summaries] health alerts detected: ‹{Alerts:[{StoreID:1 Category:METRICS Description:ranges.underreplicated Value:9}]}›
+I210116 16:21:02.073965 4095 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r23/1:‹/Table/2{7-8}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r23:‹/Table/2{7-8}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:02.174812 4095 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r23/1:‹/Table/2{7-8}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:21:02.205998 4148 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r23/1:‹/Table/2{7-8}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:21:02.206239 4095 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r23/1:‹/Table/2{7-8}›] streamed LEARNER snapshot ‹11dd23af› at applied index 18 to (n2,s2):2LEARNER in 0.00s @ ‹5.7 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:21:02.331538 4095 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r23/1:‹/Table/2{7-8}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r23:‹/Table/2{7-8}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:21:02.376702 4095 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r23/1:‹/Table/2{7-8}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:21:02.387540 4095 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r23/1:‹/Table/2{7-8}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r23:‹/Table/2{7-8}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:21:02.492886 4095 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r23/1:‹/Table/2{7-8}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:21:02.528694 4164 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r23/1:‹/Table/2{7-8}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:21:02.529055 4095 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r23/1:‹/Table/2{7-8}›] streamed LEARNER snapshot ‹f400d99a› at applied index 22 to (n3,s3):3LEARNER in 0.00s @ ‹7.6 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:21:02.651941 4095 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r23/1:‹/Table/2{7-8}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r23:‹/Table/2{7-8}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:21:02.720861 4095 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r23/1:‹/Table/2{7-8}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:21:03.971606 4155 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r21/1:‹/Table/2{5-6}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r21:‹/Table/2{5-6}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:04.006851 4155 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r21/1:‹/Table/2{5-6}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:21:04.033731 4155 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r21/1:‹/Table/2{5-6}›] streamed LEARNER snapshot ‹d3f1306a› at applied index 17 to (n3,s3):2LEARNER in 0.00s @ ‹5.9 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:21:04.033863 4229 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r21/1:‹/Table/2{5-6}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:21:04.190153 4155 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r21/1:‹/Table/2{5-6}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r21:‹/Table/2{5-6}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:21:04.245291 4155 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r21/1:‹/Table/2{5-6}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:21:04.256015 4155 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r21/1:‹/Table/2{5-6}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r21:‹/Table/2{5-6}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:21:04.326095 4155 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r21/1:‹/Table/2{5-6}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:21:04.360712 4244 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r21/1:‹/Table/2{5-6}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:21:04.360790 4155 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r21/1:‹/Table/2{5-6}›] streamed LEARNER snapshot ‹599002ed› at applied index 21 to (n2,s2):3LEARNER in 0.00s @ ‹8.4 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:21:04.471760 4155 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r21/1:‹/Table/2{5-6}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r21:‹/Table/2{5-6}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:21:04.515842 4155 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r21/1:‹/Table/2{5-6}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:21:04.979506 4237 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r33/1:‹/Table/3{7-8}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r33:‹/Table/3{7-8}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:05.034617 4237 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r33/1:‹/Table/3{7-8}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:21:05.048133 4237 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r33/1:‹/Table/3{7-8}›] streamed LEARNER snapshot ‹d79ad7ee› at applied index 18 to (n2,s2):2LEARNER in 0.00s @ ‹1.8 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:21:05.048178 4290 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r33/1:‹/Table/3{7-8}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:21:05.167039 4237 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r33/1:‹/Table/3{7-8}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r33:‹/Table/3{7-8}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:21:05.205209 4237 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r33/1:‹/Table/3{7-8}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:21:05.218507 4237 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r33/1:‹/Table/3{7-8}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r33:‹/Table/3{7-8}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:21:05.343499 4237 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r33/1:‹/Table/3{7-8}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:21:05.361873 4237 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r33/1:‹/Table/3{7-8}›] streamed LEARNER snapshot ‹67b31b9c› at applied index 22 to (n3,s3):3LEARNER in 0.00s @ ‹15 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:21:05.369425 4281 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r33/1:‹/Table/3{7-8}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:21:05.498480 4237 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r33/1:‹/Table/3{7-8}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r33:‹/Table/3{7-8}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:21:05.546188 4237 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r33/1:‹/Table/3{7-8}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:21:07.978007 4404 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r15/1:‹/Table/{19-20}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r15:‹/Table/{19-20}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:08.034469 4404 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r15/1:‹/Table/{19-20}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:21:08.047862 4362 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r15/1:‹/Table/{19-20}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:21:08.047829 4404 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r15/1:‹/Table/{19-20}›] streamed LEARNER snapshot ‹ce42637c› at applied index 18 to (n2,s2):2LEARNER in 0.00s @ ‹5.7 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:21:08.153388 4404 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r15/1:‹/Table/{19-20}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r15:‹/Table/{19-20}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:21:08.195191 4404 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r15/1:‹/Table/{19-20}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:21:08.218026 4404 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r15/1:‹/Table/{19-20}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r15:‹/Table/{19-20}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:21:08.332656 4404 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r15/1:‹/Table/{19-20}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:21:08.384932 4413 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r15/1:‹/Table/{19-20}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:21:08.384997 4404 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r15/1:‹/Table/{19-20}›] streamed LEARNER snapshot ‹f3945ce3› at applied index 22 to (n3,s3):3LEARNER in 0.00s @ ‹14 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:21:08.514710 4404 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r15/1:‹/Table/{19-20}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r15:‹/Table/{19-20}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:21:08.555172 4404 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r15/1:‹/Table/{19-20}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:21:08.983708 4442 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r18/1:‹/Table/2{2-3}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r18:‹/Table/2{2-3}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:09.034278 4442 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r18/1:‹/Table/2{2-3}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:21:09.054330 4493 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r18/1:‹/Table/2{2-3}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:21:09.054349 4442 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r18/1:‹/Table/2{2-3}›] streamed LEARNER snapshot ‹db7f95b1› at applied index 18 to (n3,s3):2LEARNER in 0.00s @ ‹3.3 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:21:09.172682 4442 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r18/1:‹/Table/2{2-3}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r18:‹/Table/2{2-3}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:21:09.225734 4442 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r18/1:‹/Table/2{2-3}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:21:09.253528 4442 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r18/1:‹/Table/2{2-3}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r18:‹/Table/2{2-3}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:21:09.352761 4442 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r18/1:‹/Table/2{2-3}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:21:09.385883 4457 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r18/1:‹/Table/2{2-3}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:21:09.385829 4442 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r18/1:‹/Table/2{2-3}›] streamed LEARNER snapshot ‹ca721e0f› at applied index 22 to (n2,s2):3LEARNER in 0.00s @ ‹12 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:21:09.516829 4442 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r18/1:‹/Table/2{2-3}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r18:‹/Table/2{2-3}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:21:09.547746 4442 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r18/1:‹/Table/2{2-3}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:21:10.851193 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 115 MiB RSS, 271 goroutines, 39 MiB/17 MiB/63 MiB GO alloc/idle/total, 11 MiB/14 MiB CGO alloc/total, 0.7 CGO/sec, 4.6/2.6 %(u/s)time, 0.0 %gc (1x), 1.0 MiB/1.9 MiB (r/w)net
+W210116 16:21:10.960746 1037 server/node.go:785 ⋮ [n1,summaries] health alerts detected: ‹{Alerts:[{StoreID:1 Category:METRICS Description:ranges.underreplicated Value:4}]}›
+I210116 16:21:11.993056 4647 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r13/1:‹/Table/1{7-8}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r13:‹/Table/1{7-8}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:12.062780 4647 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r13/1:‹/Table/1{7-8}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:21:12.085454 4608 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r13/1:‹/Table/1{7-8}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:21:12.085416 4647 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r13/1:‹/Table/1{7-8}›] streamed LEARNER snapshot ‹447e7607› at applied index 18 to (n2,s2):2LEARNER in 0.00s @ ‹5.3 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:21:12.245031 4647 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r13/1:‹/Table/1{7-8}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r13:‹/Table/1{7-8}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:21:12.302276 4647 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r13/1:‹/Table/1{7-8}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:21:12.324647 4647 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r13/1:‹/Table/1{7-8}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r13:‹/Table/1{7-8}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:21:12.389767 4647 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r13/1:‹/Table/1{7-8}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:21:12.424128 4647 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r13/1:‹/Table/1{7-8}›] streamed LEARNER snapshot ‹8c52b085› at applied index 22 to (n3,s3):3LEARNER in 0.00s @ ‹4.4 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:21:12.442005 4723 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r13/1:‹/Table/1{7-8}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:21:12.618716 4647 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r13/1:‹/Table/1{7-8}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r13:‹/Table/1{7-8}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:21:12.655974 4647 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r13/1:‹/Table/1{7-8}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:21:12.996450 4738 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r34/1:‹/Table/3{8-9}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r34:‹/Table/3{8-9}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:13.044259 4738 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r34/1:‹/Table/3{8-9}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:21:13.067059 4759 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r34/1:‹/Table/3{8-9}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:21:13.067031 4738 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r34/1:‹/Table/3{8-9}›] streamed LEARNER snapshot ‹f0460160› at applied index 18 to (n2,s2):2LEARNER in 0.00s @ ‹7.0 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:21:13.250077 4738 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r34/1:‹/Table/3{8-9}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r34:‹/Table/3{8-9}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:21:13.300729 4738 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r34/1:‹/Table/3{8-9}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:21:13.324142 4738 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r34/1:‹/Table/3{8-9}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r34:‹/Table/3{8-9}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:21:13.383055 4738 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r34/1:‹/Table/3{8-9}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:21:13.405507 4738 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r34/1:‹/Table/3{8-9}›] streamed LEARNER snapshot ‹f150414d› at applied index 22 to (n3,s3):3LEARNER in 0.00s @ ‹13 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.00s
+I210116 16:21:13.420726 4771 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r34/1:‹/Table/3{8-9}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:21:13.545112 4738 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r34/1:‹/Table/3{8-9}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r34:‹/Table/3{8-9}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:21:13.580766 4738 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r34/1:‹/Table/3{8-9}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:21:14.000964 4783 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r24/1:‹/Table/2{8-9}›] change replicas (add ‹[(n2,s2):2LEARNER]› remove ‹[]›): existing descriptor r24:‹/Table/2{8-9}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:14.060771 4783 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r24/1:‹/Table/2{8-9}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n2,s2):2LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2LEARNER]› next=3
+I210116 16:21:14.097808 4783 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r24/1:‹/Table/2{8-9}›] streamed LEARNER snapshot ‹fec0042c› at applied index 18 to (n2,s2):2LEARNER in 0.00s @ ‹5.0 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.02s
+I210116 16:21:14.098110 4823 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r24/1:‹/Table/2{8-9}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):2LEARNER
+I210116 16:21:14.238151 4783 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r24/1:‹/Table/2{8-9}›] change replicas (add ‹[(n2,s2):2]› remove ‹[]›): existing descriptor r24:‹/Table/2{8-9}› [(n1,s1):1, (n2,s2):2LEARNER, next=3, gen=1]
+I210116 16:21:14.313077 4783 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r24/1:‹/Table/2{8-9}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n2,s2):2]›: after=‹[(n1,s1):1 (n2,s2):2]› next=3
+I210116 16:21:14.334435 4783 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r24/1:‹/Table/2{8-9}›] change replicas (add ‹[(n3,s3):3LEARNER]› remove ‹[]›): existing descriptor r24:‹/Table/2{8-9}› [(n1,s1):1, (n2,s2):2, next=3, gen=2]
+I210116 16:21:14.400972 4783 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r24/1:‹/Table/2{8-9}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n3,s3):3LEARNER]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3LEARNER]› next=4
+I210116 16:21:14.419684 4783 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r24/1:‹/Table/2{8-9}›] streamed LEARNER snapshot ‹15258fee› at applied index 22 to (n3,s3):3LEARNER in 0.00s @ ‹9.2 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:21:14.419783 4829 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r24/1:‹/Table/2{8-9}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):3LEARNER
+I210116 16:21:14.555369 4783 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r24/1:‹/Table/2{8-9}›] change replicas (add ‹[(n3,s3):3]› remove ‹[]›): existing descriptor r24:‹/Table/2{8-9}› [(n1,s1):1, (n2,s2):2, (n3,s3):3LEARNER, next=4, gen=3]
+I210116 16:21:14.583351 4783 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r24/1:‹/Table/2{8-9}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n3,s3):3]›: after=‹[(n1,s1):1 (n2,s2):2 (n3,s3):3]› next=4
+I210116 16:21:15.006616 4852 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r28/1:‹/Table/3{2-3}›] change replicas (add ‹[(n3,s3):2LEARNER]› remove ‹[]›): existing descriptor r28:‹/Table/3{2-3}› [(n1,s1):1, next=2, gen=0]
+I210116 16:21:15.047707 4852 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r28/1:‹/Table/3{2-3}›] proposing SIMPLE(l2) ADD_REPLICA‹[(n3,s3):2LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2LEARNER]› next=3
+I210116 16:21:15.062164 4852 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r28/1:‹/Table/3{2-3}›] streamed LEARNER snapshot ‹d8eb3b44› at applied index 17 to (n3,s3):2LEARNER in 0.00s @ ‹3.5 MiB›/s: ‹kv pairs: 7, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:21:15.062967 4857 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r28/1:‹/Table/3{2-3}›] skipping snapshot; replica is likely a learner in the process of being added: (n3,s3):2LEARNER
+I210116 16:21:15.191972 4852 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r28/1:‹/Table/3{2-3}›] change replicas (add ‹[(n3,s3):2]› remove ‹[]›): existing descriptor r28:‹/Table/3{2-3}› [(n1,s1):1, (n3,s3):2LEARNER, next=3, gen=1]
+I210116 16:21:15.249456 4852 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r28/1:‹/Table/3{2-3}›] proposing SIMPLE(v2) ADD_REPLICA‹[(n3,s3):2]›: after=‹[(n1,s1):1 (n3,s3):2]› next=3
+I210116 16:21:15.274595 4852 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r28/1:‹/Table/3{2-3}›] change replicas (add ‹[(n2,s2):3LEARNER]› remove ‹[]›): existing descriptor r28:‹/Table/3{2-3}› [(n1,s1):1, (n3,s3):2, next=3, gen=2]
+I210116 16:21:15.351661 4852 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r28/1:‹/Table/3{2-3}›] proposing SIMPLE(l3) ADD_REPLICA‹[(n2,s2):3LEARNER]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3LEARNER]› next=4
+I210116 16:21:15.380751 4852 kv/kvserver/store_snapshot.go:988 ⋮ [n1,replicate,s1,r28/1:‹/Table/3{2-3}›] streamed LEARNER snapshot ‹71695448› at applied index 21 to (n2,s2):3LEARNER in 0.00s @ ‹11 MiB›/s: ‹kv pairs: 11, log entries: 0›, rate-limit: ‹8.0 MiB›/s, queued: 0.01s
+I210116 16:21:15.380798 4898 kv/kvserver/raft_snapshot_queue.go:129 ⋮ [n1,raftsnapshot,s1,r28/1:‹/Table/3{2-3}›] skipping snapshot; replica is likely a learner in the process of being added: (n2,s2):3LEARNER
+I210116 16:21:15.480529 4852 kv/kvserver/replica_command.go:1654 ⋮ [n1,replicate,s1,r28/1:‹/Table/3{2-3}›] change replicas (add ‹[(n2,s2):3]› remove ‹[]›): existing descriptor r28:‹/Table/3{2-3}› [(n1,s1):1, (n3,s3):2, (n2,s2):3LEARNER, next=4, gen=3]
+I210116 16:21:15.517152 4852 kv/kvserver/replica_raft.go:247 ⋮ [n1,s1,r28/1:‹/Table/3{2-3}›] proposing SIMPLE(v3) ADD_REPLICA‹[(n2,s2):3]›: after=‹[(n1,s1):1 (n3,s3):2 (n2,s2):3]› next=4
+I210116 16:21:20.851174 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 116 MiB RSS, 272 goroutines, 42 MiB/14 MiB/63 MiB GO alloc/idle/total, 11 MiB/14 MiB CGO alloc/total, 0.6 CGO/sec, 4.2/2.3 %(u/s)time, 0.0 %gc (1x), 1.3 MiB/2.6 MiB (r/w)net
+I210116 16:21:30.862806 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 115 MiB RSS, 272 goroutines, 36 MiB/15 MiB/63 MiB GO alloc/idle/total, 11 MiB/14 MiB CGO alloc/total, 0.6 CGO/sec, 2.1/1.2 %(u/s)time, 0.0 %gc (1x), 574 KiB/1.3 MiB (r/w)net
+I210116 16:21:40.828921 1001 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  2: ‹localhost:26259› (59s: infos 289/193 sent/received, bytes 78262B/54731B sent/received)
+gossip server (1/3 cur/max conns, infos 624/395 sent/received, bytes 270173B/107066B sent/received)
+  3: ‹localhost:26258› (59s)
+gossip connectivity
+  n1 [sentinel];
+  n1 -> n2; n2 -> n3; n3 -> n1;
+I210116 16:21:40.857934 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 114 MiB RSS, 274 goroutines, 30 MiB/21 MiB/64 MiB GO alloc/idle/total, 11 MiB/14 MiB CGO alloc/total, 0.6 CGO/sec, 1.9/1.1 %(u/s)time, 0.0 %gc (1x), 574 KiB/1.3 MiB (r/w)net
+I210116 16:21:50.859004 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 115 MiB RSS, 273 goroutines, 46 MiB/9.0 MiB/64 MiB GO alloc/idle/total, 11 MiB/14 MiB CGO alloc/total, 0.6 CGO/sec, 2.3/1.4 %(u/s)time, 0.0 %gc (0x), 676 KiB/1.4 MiB (r/w)net
+I210116 16:22:00.860270 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 116 MiB RSS, 273 goroutines, 39 MiB/13 MiB/65 MiB GO alloc/idle/total, 19 MiB/22 MiB CGO alloc/total, 0.7 CGO/sec, 2.1/1.3 %(u/s)time, 0.0 %gc (1x), 555 KiB/1.2 MiB (r/w)net
+I210116 16:22:10.862691 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 117 MiB RSS, 274 goroutines, 29 MiB/22 MiB/65 MiB GO alloc/idle/total, 19 MiB/22 MiB CGO alloc/total, 0.6 CGO/sec, 2.0/1.2 %(u/s)time, 0.0 %gc (1x), 538 KiB/1.2 MiB (r/w)net
+I210116 16:22:20.860160 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 118 MiB RSS, 274 goroutines, 44 MiB/10 MiB/65 MiB GO alloc/idle/total, 19 MiB/22 MiB CGO alloc/total, 0.6 CGO/sec, 2.1/1.3 %(u/s)time, 0.0 %gc (0x), 626 KiB/1.3 MiB (r/w)net
+I210116 16:22:30.856577 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 119 MiB RSS, 274 goroutines, 34 MiB/17 MiB/65 MiB GO alloc/idle/total, 19 MiB/22 MiB CGO alloc/total, 0.6 CGO/sec, 2.0/1.2 %(u/s)time, 0.0 %gc (1x), 561 KiB/1.4 MiB (r/w)net
+I210116 16:22:40.805520 1001 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  2: ‹localhost:26259› (1m59s: infos 496/307 sent/received, bytes 108292B/77002B sent/received)
+gossip server (1/3 cur/max conns, infos 1037/622 sent/received, bytes 330102B/147700B sent/received)
+  3: ‹localhost:26258› (1m59s)
+I210116 16:22:40.856004 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 120 MiB RSS, 274 goroutines, 24 MiB/26 MiB/61 MiB GO alloc/idle/total, 19 MiB/22 MiB CGO alloc/total, 0.6 CGO/sec, 2.3/1.5 %(u/s)time, 0.0 %gc (1x), 569 KiB/1.3 MiB (r/w)net
+I210116 16:22:47.407939 5644 sql/event_log.go:162 ⋮ [n1,client=‹127.0.0.1:62770›,hostssl,user=root] Event: ‹"create_database"›, target: 52, info: ‹{DatabaseName:tack Statement:CREATE DATABASE tack User:root}›
+I210116 16:22:50.856989 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 121 MiB RSS, 273 goroutines, 42 MiB/13 MiB/61 MiB GO alloc/idle/total, 19 MiB/22 MiB CGO alloc/total, 0.6 CGO/sec, 2.4/1.5 %(u/s)time, 0.0 %gc (0x), 718 KiB/1.5 MiB (r/w)net
+I210116 16:23:00.858437 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 122 MiB RSS, 273 goroutines, 35 MiB/17 MiB/61 MiB GO alloc/idle/total, 19 MiB/22 MiB CGO alloc/total, 0.6 CGO/sec, 2.0/1.2 %(u/s)time, 0.0 %gc (1x), 546 KiB/1.2 MiB (r/w)net
+I210116 16:23:10.864744 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 123 MiB RSS, 273 goroutines, 30 MiB/22 MiB/61 MiB GO alloc/idle/total, 19 MiB/22 MiB CGO alloc/total, 0.6 CGO/sec, 2.2/1.2 %(u/s)time, 0.0 %gc (1x), 556 KiB/1.5 MiB (r/w)net
+I210116 16:23:20.861027 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 124 MiB RSS, 274 goroutines, 45 MiB/10 MiB/61 MiB GO alloc/idle/total, 19 MiB/22 MiB CGO alloc/total, 0.6 CGO/sec, 1.9/1.2 %(u/s)time, 0.0 %gc (0x), 571 KiB/1.4 MiB (r/w)net
+I210116 16:23:30.873893 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 125 MiB RSS, 274 goroutines, 35 MiB/17 MiB/61 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.7 CGO/sec, 1.9/1.1 %(u/s)time, 0.0 %gc (1x), 514 KiB/1.2 MiB (r/w)net
+I210116 16:23:40.803734 1001 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  2: ‹localhost:26259› (2m59s: infos 705/415 sent/received, bytes 156294B/98620B sent/received)
+gossip server (1/3 cur/max conns, infos 1454/844 sent/received, bytes 425971B/187841B sent/received)
+  3: ‹localhost:26258› (2m59s)
+I210116 16:23:40.863876 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 126 MiB RSS, 275 goroutines, 29 MiB/22 MiB/62 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.1/1.3 %(u/s)time, 0.0 %gc (1x), 547 KiB/1.3 MiB (r/w)net
+I210116 16:23:50.868350 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 126 MiB RSS, 273 goroutines, 45 MiB/10 MiB/62 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.3/1.4 %(u/s)time, 0.0 %gc (0x), 675 KiB/1.3 MiB (r/w)net
+I210116 16:24:00.869148 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 127 MiB RSS, 273 goroutines, 35 MiB/17 MiB/62 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.1/1.3 %(u/s)time, 0.0 %gc (1x), 533 KiB/1.2 MiB (r/w)net
+I210116 16:24:10.875299 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 127 MiB RSS, 273 goroutines, 29 MiB/22 MiB/62 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.0/1.2 %(u/s)time, 0.0 %gc (1x), 518 KiB/1.1 MiB (r/w)net
+I210116 16:24:20.874152 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 128 MiB RSS, 274 goroutines, 44 MiB/11 MiB/62 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.0/1.3 %(u/s)time, 0.0 %gc (0x), 599 KiB/1.2 MiB (r/w)net
+I210116 16:24:30.873677 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 129 MiB RSS, 274 goroutines, 34 MiB/18 MiB/63 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.2/1.3 %(u/s)time, 0.0 %gc (1x), 533 KiB/1.1 MiB (r/w)net
+I210116 16:24:40.804402 1001 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  2: ‹localhost:26259› (3m59s: infos 914/530 sent/received, bytes 186621B/121116B sent/received)
+gossip server (1/3 cur/max conns, infos 1872/1076 sent/received, bytes 486901B/229335B sent/received)
+  3: ‹localhost:26258› (3m59s)
+I210116 16:24:40.878257 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 130 MiB RSS, 274 goroutines, 25 MiB/25 MiB/61 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.1/1.2 %(u/s)time, 0.0 %gc (1x), 518 KiB/1.2 MiB (r/w)net
+I210116 16:24:50.888823 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 131 MiB RSS, 273 goroutines, 23 MiB/26 MiB/60 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.6/1.5 %(u/s)time, 0.0 %gc (1x), 651 KiB/1.3 MiB (r/w)net
+I210116 16:25:00.887242 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 130 MiB RSS, 273 goroutines, 37 MiB/16 MiB/60 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 1.8/1.1 %(u/s)time, 0.0 %gc (0x), 936 KiB/1.2 MiB (r/w)net
+I210116 16:25:10.886323 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 131 MiB RSS, 273 goroutines, 31 MiB/21 MiB/61 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.0/1.2 %(u/s)time, 0.0 %gc (1x), 528 KiB/1.2 MiB (r/w)net
+I210116 16:25:20.890397 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 132 MiB RSS, 272 goroutines, 23 MiB/26 MiB/61 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.3/1.3 %(u/s)time, 0.0 %gc (1x), 558 KiB/1.3 MiB (r/w)net
+I210116 16:25:30.893889 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 133 MiB RSS, 272 goroutines, 37 MiB/16 MiB/61 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 1.8/1.2 %(u/s)time, 0.0 %gc (0x), 517 KiB/1.2 MiB (r/w)net
+I210116 16:25:40.805204 1001 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  2: ‹localhost:26259› (4m59s: infos 1123/640 sent/received, bytes 216970B/142989B sent/received)
+gossip server (1/3 cur/max conns, infos 2289/1299 sent/received, bytes 547396B/269564B sent/received)
+  3: ‹localhost:26258› (4m59s)
+I210116 16:25:40.897747 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 134 MiB RSS, 272 goroutines, 31 MiB/21 MiB/61 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.2/1.3 %(u/s)time, 0.0 %gc (1x), 534 KiB/1.2 MiB (r/w)net
+I210116 16:25:50.901791 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 135 MiB RSS, 271 goroutines, 27 MiB/24 MiB/61 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.7/1.5 %(u/s)time, 0.0 %gc (1x), 664 KiB/1.3 MiB (r/w)net
+I210116 16:26:00.901712 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 135 MiB RSS, 271 goroutines, 41 MiB/14 MiB/61 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 1.8/1.2 %(u/s)time, 0.0 %gc (0x), 519 KiB/1.2 MiB (r/w)net
+I210116 16:26:10.904790 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 136 MiB RSS, 271 goroutines, 33 MiB/19 MiB/61 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.2/1.3 %(u/s)time, 0.0 %gc (1x), 563 KiB/1.2 MiB (r/w)net
+I210116 16:26:20.910382 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 137 MiB RSS, 272 goroutines, 26 MiB/25 MiB/62 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 2.2/1.3 %(u/s)time, 0.0 %gc (1x), 570 KiB/1.3 MiB (r/w)net
+I210116 16:26:30.915236 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 138 MiB RSS, 272 goroutines, 40 MiB/14 MiB/62 MiB GO alloc/idle/total, 35 MiB/38 MiB CGO alloc/total, 0.6 CGO/sec, 1.7/1.1 %(u/s)time, 0.0 %gc (0x), 515 KiB/1.4 MiB (r/w)net
+I210116 16:26:40.806248 1001 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 3 node‹s›)
+gossip client (1/3 cur/max conns)
+  2: ‹localhost:26259› (5m59s: infos 1331/754 sent/received, bytes 247068B/165256B sent/received)
+gossip server (1/3 cur/max conns, infos 2703/1527 sent/received, bytes 607332B/310356B sent/received)
+  3: ‹localhost:26258› (5m59s)
+I210116 16:26:40.918222 1005 server/status/runtime.go:522 ⋮ [n1] runtime stats: 136 MiB RSS, 272 goroutines, 33 MiB/19 MiB/62 MiB GO alloc/idle/total, 67 MiB/70 MiB CGO alloc/total, 0.7 CGO/sec, 1.8/1.0 %(u/s)time, 0.0 %gc (1x), 577 KiB/1.5 MiB (r/w)net
