@@ -5,12 +5,12 @@ import './map.css'
 export const Map = () => {
     return (
       <div className="map">
-        <MapContainer center={[51, -0.09]} zoom={13} scrollWheelZoom={false}>
+        <MapContainer center={[43.4723, -80.5449]} zoom={16.5} scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[51.505, -0.09]}>
+          <Marker position={[43.4723, -80.5449]}>
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>

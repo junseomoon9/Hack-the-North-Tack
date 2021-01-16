@@ -1,13 +1,70 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Scada', sans-serif;
+}
+.nav-bar-container {
+    width: 100vw;
+}
+
+.nav-bar {
+    display: flex;
+    margin: 5px auto;
+    width: 80vw;
+    height: 13vh;
+    background-color: #F90000 ;
 }
 
 .panel {
     position: absolute;
-    left: 0%;
+    left: 10%;
     bottom: 0%;
-    width: 28vw;
-    height: 70vh;
-    background-color: blue;
+    width: 23vw;
+    height: 85vh;
+    background-color: rgb(225, 225, 231);
+    margin: 0;
+    border-radius: 20px;
+    margin-top: 10px;
 }
+
+.inner-panel{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-panel h2 {
+    margin: 0 auto;
+    font-size: 36px;
+}
+
+.add-marker-form {
+    margin: 20px 0;
+    font-size: 26px;
+}
+
+.location-input, .coursecode-input {
+    height: 35px;
+    width: 370px;
+    font-size: 24px;
+    padding: 4px;
+    border-radius: 10px;
+    border: none;
+}
+
+.seats-input {
+    height: 35px;
+    width: 100px;
+    font-size: 24px;
+    padding: 4px;
+    border-radius: 10px;
+    border: none;
+}
+
+.add-marker-form p {
+    margin-top: 10px;
+}
+
+
+
+
