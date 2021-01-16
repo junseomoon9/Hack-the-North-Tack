@@ -165,3 +165,8 @@
 .name {
   color: #fff;
 }
+
+.leaflet-container {
+  width: 100wh;
+  height: 100vh;
+}
