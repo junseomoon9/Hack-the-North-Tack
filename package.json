@@ -1,0 +1,22 @@
+{
+  "name": "hack-the-north-tack",
+  "version": "1.0.0",
+  "description": "Hack the North Project 2020",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junseomoon9/Hack-the-North-Tack.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/junseomoon9/Hack-the-North-Tack/issues"
+  },
+  "homepage": "https://github.com/junseomoon9/Hack-the-North-Tack#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
