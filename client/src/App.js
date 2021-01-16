@@ -1,9 +1,11 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import {Login} from './components/Login.js';
+import {Signup} from './components/Signup.js';
 
 import './App.css';
 import { Frontpage } from './components/Frontpage.js';
+
 
 function App() {
   return (
@@ -14,9 +16,9 @@ function App() {
         <Route path='/login'>
           <Login/>
         </Route>
-        {/* <Route path='/signup'>
-          <Signup />
-        </Route> */}
+        <Route path='/signup'>
+          <Signup /> 
+        </Route> 
         <Route path='/frontpage'>
           <Frontpage />
         </Route>
