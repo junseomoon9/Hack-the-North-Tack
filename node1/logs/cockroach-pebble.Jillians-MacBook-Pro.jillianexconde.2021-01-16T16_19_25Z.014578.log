@@ -1,0 +1,18 @@
+I210116 16:19:25.139276 23 util/log/sync_buffer.go:195 ⋮ [config] file created at: 2021/01/16 16:19:25
+I210116 16:19:25.139299 23 util/log/sync_buffer.go:195 ⋮ [config] running on machine: ‹Jillians-MacBook-Pro›
+I210116 16:19:25.139313 23 util/log/sync_buffer.go:195 ⋮ [config] binary: CockroachDB CCL v20.2.3 (x86_64-apple-darwin14, built 2020/12/14 18:37:58, go1.13.14)
+I210116 16:19:25.139326 23 util/log/sync_buffer.go:195 ⋮ [config] arguments: ‹[cockroach start --certs-dir=certs --store=node1 --listen-addr=localhost:26257 --http-addr=localhost:8080 --join=localhost:26257,localhost:26258,localhost:26259]›
+I210116 16:19:25.139349 23 util/log/sync_buffer.go:195 ⋮ [config] line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid file:line msg utf8=✓
+I210116 16:19:25.136984 23 vendor/github.com/cockroachdb/pebble/version_set.go:142 ⋮ [n?] [JOB 1] MANIFEST created 000001
+I210116 16:19:25.143945 23 vendor/github.com/cockroachdb/pebble/open.go:295 ⋮ [n?] [JOB 1] WAL created 000002
+I210116 16:19:25.167124 40 vendor/github.com/cockroachdb/pebble/table_stats.go:118 ⋮ [n?] [JOB 2] all initial table stats loaded
+I210116 16:19:25.296122 23 vendor/github.com/cockroachdb/pebble/version_set.go:142 ⋮ [n?] [JOB 1] MANIFEST created 000001
+I210116 16:19:25.300656 23 vendor/github.com/cockroachdb/pebble/open.go:295 ⋮ [n?] [JOB 1] WAL created 000002
+I210116 16:19:25.316716 78 vendor/github.com/cockroachdb/pebble/table_stats.go:118 ⋮ [n?] [JOB 2] all initial table stats loaded
+I210116 16:20:41.009168 1020 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 3] WAL created 000004
+I210116 16:20:41.634981 1047 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 4] WAL created 000005
+I210116 16:20:51.039991 1020 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 5] WAL created 000006
+I210116 16:21:01.812251 1022 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 6] WAL created 000007
+I210116 16:21:51.073146 1021 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 7] WAL created 000008
+I210116 16:23:21.726436 1050 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 8] WAL created 000009
+I210116 16:26:31.655867 1051 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 9] WAL created 000010
