@@ -1,17 +1,24 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Landing from './components/landing.js';
-import Login from './components/login.js';
-import Signup from './components/signup.js';
-
+import {Map} from './components/Map.js';
+import {Login} from './components/Login.js'
+import './App.css'
 
 function App() {
   return (
-    <Switch>
-      <Route path='/' component={Landing} exact />
-      <Route path='/signup' component={Signup} />
-      <Route path='/login' component={Login} />
-      <Route component={Error}/>
-    </Switch>
+    <BrowserRouter>
+      <Switch>
+      
+        <Route path='/' exact />
+        <Route path='/login'>
+          <Login/>
+        </Route>
+        <Route path='/map'>
+          <Map/>
+        </Route>
+      </Switch>
+    </BrowserRouter>
+    
+
   );
 }
 
