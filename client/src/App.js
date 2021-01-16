@@ -7,7 +7,11 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
+      
         <Route path='/' exact />
+        <Route path='/login'>
+          <Login/>
+        </Route>
         <Route path='/map'>
           <Map/>
         </Route>
