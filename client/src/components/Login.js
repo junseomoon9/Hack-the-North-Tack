@@ -3,19 +3,23 @@ import './Login.css'
 
 export const Login = () => {
     return (
-        <div className="welcome">
-            <h1> Welcome to Tack!</h1>
-            <label>
+        <div className="login">
+            <div className = "title">
+            <div className="welcome"> Welcome to Tack!</div>
+            </div>
+            <form>
+            <label className="email">
                  <p>Email</p>
                 <input type="text" />
             </label>
-            <label>
+            <label className="password">
                  <p>Password</p>
                 <input type="password" />
              </label>
-            <div>
+            <div className = "submit">
                 <button type="submit">Submit</button>
              </div>
+             </form>
         </div>
 
         
