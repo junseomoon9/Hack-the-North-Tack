@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import './Login.css'
 import tacklogo from '../images/tacklogo.png'
 
@@ -21,7 +22,7 @@ export const Login = () => {
               <input type="password" />
             </label>
             <div className="submit">
-              <button type="submit">Login</button>
+              <Link to="/frontpage"><button type="submit">Login</button></Link>
             </div>
           </form>
         </div>
