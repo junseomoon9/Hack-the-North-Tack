@@ -12,7 +12,7 @@
     margin: 5px auto;
     width: 80vw;
     height: 13vh;
-    background-color: #F90000 ;
+    background-color: #f55e5e ;
 }
 
 .panel {
@@ -65,6 +65,22 @@
     margin-top: 10px;
 }
 
+.description-input {
+    border: none;
+    font-size: 24px;
+    padding: 4px;
+}
 
+.remove-marker-btn {
+    width: 150px;
+    height: 70px;
+    margin: 0 auto;
+    
+}
 
+.tacklogo-img{
+    height: 125px;
+    width: 330px;
+    margin-right: 1150px;
+}
 
