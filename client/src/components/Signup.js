@@ -6,18 +6,43 @@ export const Signup = () => {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [apiResponse, setApiResponse] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        callAPI();
         alert(`Submitting Name ${name} ${lastName} 
         Email: ${email} ${password}`);
+    };
+
+    const callAPI = () => {
+        fetch("http://localhost:9000/signup", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user: {
+                    firstN: `${name}`,
+                    lastN: `${lastName}`,
+                    email: `${email}`,
+                    password: `${password}`
+                }
+            })
+        });
     }
+
+
+
+    
+
     return (
         <div className="signupPage">
+            <p>{apiResponse}</p>
             <div className="header"></div>
             <span className="welcomeTitle">WELCOME TO TACK</span>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} method="POST" action="/signup">
                 <label>
                 <span className="firstNLabel">First Name:</span>
                         <input
