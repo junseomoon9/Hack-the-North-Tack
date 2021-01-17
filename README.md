@@ -12,4 +12,6 @@ With the terminal, cd into Hack-the-North-Tack/client and type
 this will install all node dependancies which are used in our project, then to run it,
 `npm start`
 
-Then go to `http://localhost:3000/frontpage` to view the map and add your won pins
+Then go to `http://localhost:3000/frontpage` and enjoy!
+
+The full npx express, and scripts to initalize the MySQl data base will come soon!
