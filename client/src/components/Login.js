@@ -21,7 +21,7 @@ export const Login = () => {
               <input type="password" />
             </label>
             <div className="submit">
-              <button type="submit">Submit</button>
+              <button type="submit">Login</button>
             </div>
           </form>
         </div>

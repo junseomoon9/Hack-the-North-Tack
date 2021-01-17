@@ -5,27 +5,26 @@ import {Signup} from './components/Signup.js';
 
 import './App.css';
 import { Frontpage } from './components/Frontpage.js';
-
+import { GlobalProvider } from "./components/context/GlobalContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-      
-        <Route path='/' exact />
-        <Route path='/login'>
-          <Login/>
-        </Route>
-        <Route path='/signup'>
-          <Signup /> 
-        </Route> 
-        <Route path='/frontpage'>
-          <Frontpage />
-        </Route>
-      </Switch>
-    </BrowserRouter>
-    
-
+    <GlobalProvider>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact />
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/frontpage">
+            <Frontpage />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </GlobalProvider>
   );
 }
 
